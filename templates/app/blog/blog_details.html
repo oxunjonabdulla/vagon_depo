@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>AeroLogix - Logistics & Transportation HTML Template</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "images/favicon.svg" %}">
+    <!-- Google Fonts Css-->
+     <link rel="preconnect" href="{% static "fonts.googleapis.com/index.html" %}">
+    <link rel="preconnect" href="{% static "fonts.gstatic.com/index.html" %}" crossorigin>
+    <link href="{% static "fonts.googleapis.com/css244c5.css" %}?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="{% static "css/slicknav.min.css" %}" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="{% static "css/swiper-bundle.min.css" %}">
+    <!-- Font Awesome Icon Css-->
+    <link href="{% static "css/all.min.css" %}" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="{% static "css/animate.css" %}" rel="stylesheet">
+    <!-- Magnific Css -->
+    <link href="{% static "css/magnific-popup.css" %}" rel="stylesheet">
+    <!-- Main Custom Css -->
+    <link href="{% static "css/custom.css" %}" rel="stylesheet" media="screen">
+</head>
+
+<body class="tt-magic-cursor">
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="{% static "images/loader.svg" %}" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Magic Cursor Start -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- Magic Cursor End -->
+
+    <!-- Topbar Section Start -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-md-8">
+                    <!-- Topbar Contact Information Start -->
+                    <div class="topbar-contact-info">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> 121 King Street, Melbourne</a></li>
+                            <li><a href="#"><i class="fa-solid fa-at"></i> email@yourdomain.com</a></li>
+                        </ul>
+                    </div>
+                    <!-- Topbar Contact Information End -->
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <!-- Topbar Social Links Start -->
+                    <div class="topbar-social-links">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Topbar Social Links End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar Section End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                      <!-- Logo Start -->
+                    <a class="navbar-brand" href="{% url 'index' %}"><img class="logo-font-size" src="{% static "images/logo.png" %}" alt=""></a>
+                    <!-- Logo End -->
+    
+                      <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <ul class="navbar-nav mr-auto" id="menu">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Main Menu End -->
+
+                    <!--Get Contact Us Start-->
+                    <div class="header-contact-us">
+                        <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt=""><h3>Call Anytime <span>808 707 6060</span></h3></a>
+                    </div>                           
+                    <!--Get Contact Us End-->
+
+                    <div class="navbar-toggle"></div>                         
+                </div>
+            </nav>
+
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page header Start -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header box Start -->
+                    <div class="page-header-box">
+                        <h2 class="text-anime-style-3">Overcoming Challenges in International Freight Forwarding</h2>
+                        <div class="post-single-meta wow fadeInUp" data-wow-delay="0.25s">
+							<ul >
+								<li>Fab 26, 2024</li>
+                                <li>cargo ship</li>
+							</ul>
+						</div>                            
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Single Post Page Start -->
+    <div class="page-single-post">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <!-- Blog Detail Content Start -->
+                    <div class="blog-detail-content">
+                        <!-- Blog Detail Featured Image Start -->
+                        <div class="blog-detail-featured-image">
+                            <figure class="reveal image-anime">
+                                <img src="{% static "images/post-1.jpg" %}" alt="">
+                            </figure>
+                        </div>
+                        <!-- Blog Detail Featured Image End -->
+
+                        <!-- Blog Detail Post Content Start -->
+                        <div class="blog-detail-post-content wow fadeInUp" data-wow-delay="0.75s">
+                            <p>One of the most significant advancements in transport and logistics is the integration of automation technologies. Automated systems can handle repetitive tasks, such as inventory management, order processing, and route planning, with higher speed and accuracy than human operators. Implementing automation not only reduces human errors but also enables your workforce to focus on more complex and strategic activities.</p>
+
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                            <h3>Embrace Automation</h3>
+
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        </div>
+                        <!-- Blog Detail Post Content End -->
+
+                        <!-- Post Extra Info Start -->
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <!-- Post Tags Start -->
+                            <div class="post-tags wow fadeInUp" data-wow-delay="0.25s">
+                                <a href="#">02.12.2020</a>
+{#                                <a href="#">air freight</a>#}
+{#                                <a href="#">transport</a>#}
+                            </div>
+                            <!-- Post Tags End -->
+                        </div>
+
+                        <div class="col-lg-4">
+                            <!-- Post Sharing Links Start -->
+                            <div class="post-social-links wow fadeInUp" data-wow-delay="0.25s">
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- Post Sharing Links End -->
+                        </div>
+                    </div>
+                    <!-- Post Extra Info End -->
+                    </div>
+                    <!-- Blog Detail Content End -->
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <!-- Service Details sidebar Start -->
+                    <div class="service-details-sidebar">
+                        <!-- Post Category List Start -->
+                        <div class="post-Category-list blog-details-list wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="footer-info-heading">
+                                <h2>Logistics Services</h2>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-right-long"></i> Transport</a></li>
+                                <li><a href="#"><i class="fa-solid fa-right-long"></i> Shipping</a></li>
+                                <li><a href="#"><i class="fa-solid fa-right-long"></i> Cargo Transport</a></li>
+                                <li><a href="#"><i class="fa-solid fa-right-long"></i> Port</a></li>
+                                <li><a href="#"><i class="fa-solid fa-right-long"></i> Air Transport</a></li>
+                            </ul>
+                        </div>
+                        <!-- Post Category List End -->
+
+
+                        <div class="blog-details-post-widget wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="footer-info-heading">
+                                <h2>Latest News</h2>
+                            </div>
+                            <div class="post-widget-body">
+                                <!-- Recent Post Item Start -->
+                                <div class="recent-post-item">
+                                    <div class="recent-post-feature-img">
+                                        <figure>
+                                            <a href="#"><img src="{% static "images/post-2.jpg" %}" alt="img"></a>
+                                        </figure>
+                                    </div>
+
+                                    <div class="recent-post-content">
+                                        <h3><a href="#">Why Hiring a Professional Cleaning Service is Worth</a></h3>
+                                        <div class="post-readmore">
+                                            <a href="#">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Recent Post Item End -->
+
+                                <!-- Recent Post Item Start -->
+                                <div class="recent-post-item">
+                                    <div class="recent-post-feature-img">
+                                        <figure>
+                                            <a href="#"><img src="{% static "images/post-3.jpg" %}" alt="img"></a>
+                                        </figure>
+                                    </div>
+
+                                    <div class="recent-post-content">
+                                        <h3><a href="#">The Ultimate Guide to a Spotless Home</a></h3>
+                                        <div class="post-readmore">
+                                            <a href="#">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Recent Post Item End -->
+
+                                <!-- Recent Post Item Start -->
+                                <div class="recent-post-item">
+                                    <div class="recent-post-feature-img">
+                                        <figure>
+                                            <a href="#"><img src="{% static "images/post-4.jpg" %}" alt="img"></a>
+                                        </figure>
+                                    </div>
+
+                                    <div class="recent-post-content">
+                                        <h3><a href="#">Are your cleaners trained and experienced?</a></h3>
+                                        <div class="post-readmore">
+                                            <a href="#">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Recent Post Item End -->
+                            </div>
+                        </div>
+
+                        <!-- Service Logistics Card Start -->
+                        <div class="service-logistics-card wow fadeInUp" data-wow-delay="0.75s">
+                            <div class="logistics-card-image">
+                                <img src="{% static "images/logo.svg" %}" alt="">
+                            </div>
+                            <div class="logistics-card-title">
+                                <h2>Need Help ?</h2>
+                                <p>Got questions or need assistance with your logistics needs? Our team is here to help.</p>
+                            </div>
+                            <div class="logistics-card-body">
+                                <a href="#" class="btn-default">Contact Us</a>
+                                <!--Get Contact Us Start-->
+                                <div class="header-contact-us">
+                                    <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt=""><h3>Call Anytime <span>808 707 6060</span></h3></a>
+                                </div>                           
+                                <!--Get Contact Us End-->   
+                            </div>
+                        </div>
+                        <!-- Service Logistics Card End -->
+                    </div>
+                    <!-- Service Details sidebar End -->
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Single Post Page End -->
+
+    <!-- Main Footer Start  -->
+    <footer class="main-footer">
+        <!-- Mega Footer Start -->
+        <div class="mega-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- Footer About Start -->
+                        <div class="footer-about">
+                            <!-- Footer Heading Start -->
+                            <div class="footer-heading">
+                                <figure>
+                                    <img src="{% static "images/footer-logo.svg" %}" alt="">
+                                </figure>
+                            </div>
+                            <!-- Footer Heading End -->
+
+                            <!-- Footer Content Start -->
+                            <div class="footer-content">
+                                <p>we understand that the world of logistics is complex and ever-changing.</p>
+                            </div>
+                            <!-- Footer Content End -->
+
+                            <!-- Footer Social Link Start -->
+                            <div class="footer-social-link">
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li> 
+                                </ul>
+                            </div>
+                            <!-- Footer Social Link End -->
+                        </div>  
+                        <!-- Footer About End -->                         
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Footer links Start -->
+                        <div class="footer-links">
+                            <div class="footer-info-heading">
+                                <h2>Quick Links</h2>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer links End -->
+                    </div>                        
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Footer Contact Info Start -->
+                        <div class="footer-contact-info">
+                            <!-- footer info heading Start -->
+                            <div class="footer-info-heading">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <!-- footer info heading End -->
+
+                            <!-- Footer Contact Info Box Start -->
+                            <div class="footer-contact-box">
+                                <div class="footer-info-box">
+                                    <div class="icon-box">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+
+                                    <p>info@domain.com</p>
+                                </div>
+
+                                <div class="footer-info-box">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    
+                                    <p>121 King Street, Melbourne</p>									
+                                </div>
+
+                                <div class="footer-info-box">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+
+                                    <p>808 707 6060</p>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Info Box End -->
+                        </div>
+                    </div>
+                    <!-- Footer Contact Info End -->
+
+                    <!-- Subscribe Newsletters Start  -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- footer info heading Start -->
+                        <div class="footer-info-heading">
+                            <h2>News Letter</h2>
+                        </div>
+                        <!-- footer info heading End -->
+
+                        <!-- Newsletters Content Start -->
+                        <div class="newsletters-content">
+                            <p>Join our newsletter community to receive regular updates on the topics that matter to you.</p>
+                        </div>
+                        <!-- Newsletters Content End -->
+
+                        <!-- Newsletters Form Start -->
+                        <div class="newsletters-form">
+                            <form id="newslettersForm" action="#" class="mail-box">
+                                <div class="row no-gutters">
+                                    <div class="form-group col-11">
+                                        <input type="email" class="form-control" placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="col-1">
+                                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Newsletters Form End -->
+                    </div>
+                    <!-- Subscribe Newsletters End  -->
+                </div>
+            </div>
+        </div>
+        <!-- Mega Footer End -->
+    </footer>
+    <!-- Main footer End -->
+
+    <!-- Footer Copyright Section Start -->
+    <div class="footer-copyright-links">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-7 col-12">
+                    <!-- Footer Copyright Content Start -->
+                    <div class="footer-copyright">
+                        <p>Copyright 2024  <b>AeroLogix.</b> All Right Reserved.</p>
+                    </div>
+                    <!-- Footer Copyright Content End -->
+                </div>
+                <div class="col-lg-6 col-md-5 col-12">
+                    <!-- Footer Policy Links Start -->
+                    <div class="footer-policy-links">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Policy Links End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Copyright Section End -->
+
+    <!-- Jquery Library File -->
+    <script src="{% static "js/jquery-3.7.1.min.js" %}"></script>
+    <!-- Bootstrap js File -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <!-- Validator js File -->
+    <script src="{% static "js/validator.min.js" %}"></script>
+    <!-- SlickNav js File -->
+    <script src="{% static "js/jquery.slicknav.js" %}"></script>
+    <!-- Swiper js File -->
+    <script src="{% static "js/swiper-bundle.min.js" %}"></script>
+    <!-- Counter js File -->
+    <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+    <script src="{% static "js/jquery.counterup.min.js" %}"></script>
+    <!-- Magnific js File -->
+    <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+    <!-- SmoothScroll -->
+    <script src="{% static "js/SmoothScroll.js" %}"></script>
+    <!-- Parallax js -->
+	<script src="{% static "js/parallaxie.js" %}"></script>
+    <!-- MagicCursor js File -->
+    <script src="{% static "js/gsap.min.js" %}"></script>
+    <script src="{% static "js/magiccursor.js" %}"></script>
+    <!-- Text Effect js File -->
+	<script src="{% static "js/SplitText.js" %}"></script>
+    <script src="{% static "js/ScrollTrigger.min.js" %}"></script>
+    <!-- YTPlayer js File -->
+    <script src="{% static "js/jquery.mb.YTPlayer.min.js" %}"></script>
+    <!-- Wow js File -->
+    <script src="{% static "js/wow.js" %}"></script>
+    <!-- Main Custom js File -->
+    <script src="{% static "js/function.js" %}"></script>
+</body>
+
+</html>
