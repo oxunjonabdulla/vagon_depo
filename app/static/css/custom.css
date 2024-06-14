@@ -127,6 +127,8 @@ body{
 	overflow: hidden;
 }
 
+
+
 .image-anime:after{
 	content: "";
 	position: absolute;
@@ -1210,7 +1212,7 @@ header.main-header .header-sticky.active{
 
 .our-contract{
 	position: relative;
-	background-image: url(../images/contact-bg-img.jpg);
+	background-image: url(../images/main_image.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 100px 0;
@@ -1798,7 +1800,7 @@ header.main-header .header-sticky.active{
 
 .page-header{
 	position: relative;
-	background-image: url(../images/page-heade-bg.jpg);
+	background-image: url(../images/vagon.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;

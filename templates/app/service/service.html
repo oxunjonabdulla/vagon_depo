@@ -1,7 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Awaiken">
+    <meta name="author" content="Qarshi Vagon Deposi">
     <!-- Page Title -->
-    <title>AeroLogix - Logistics & Transportation HTML Template</title>
+    <title>Qarshi Vagon Deposi</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{% static "images/favicon.svg" %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "images/logo.png" %}">
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="{% static "fonts.googleapis.com/index.html" %}">
     <link rel="preconnect" href="{% static "fonts.gstatic.com/index.html" %}" crossorigin>
@@ -41,7 +41,7 @@
 <div class="preloader">
     <div class="loading-container">
         <div class="loading"></div>
-        <div id="loading-icon"><img src="{% static "images/loader.svg" %}" alt=""></div>
+        <div id="loading-icon"><img src="{% static "images/logo.png" %}" alt=""></div>
     </div>
 </div>
 <!-- Preloader End -->
@@ -60,8 +60,11 @@
                 <!-- Topbar Contact Information Start -->
                 <div class="topbar-contact-info">
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> 121 King Street, Melbourne</a></li>
-                        <li><a href="#"><i class="fa-solid fa-at"></i> email@yourdomain.com</a></li>
+                        <li><a href="#"><i
+                                class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}
+                        </a>
+                        </li>
+                        <li><a href="#"><i class="fa-solid fa-at"></i>  vchdkarshi@mail.ru</a></li>
                     </ul>
                 </div>
                 <!-- Topbar Contact Information End -->
@@ -71,9 +74,12 @@
                 <!-- Topbar Social Links Start -->
                 <div class="topbar-social-links">
                     <ul>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                class="fa-brands fa-telegram"></i></a></li>
+                        <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
                     </ul>
                 </div>
                 <!-- Topbar Social Links End -->
@@ -88,28 +94,69 @@
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                
-                  <!-- Logo Start -->
-                    <a class="navbar-brand" href="{% url 'index' %}"><img class="logo-font-size" src="{% static "images/logo.png" %}" alt=""></a>
-                    <!-- Logo End -->
+                <!-- Logo Start -->
+                <a class="navbar-brand" href="{% url 'index' %}"><img class="logo-font-size"
+                                                                      src="{% static "images/logo.png" %}" alt=""></a>
+                <!-- Logo End -->
 
-                  <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- Main Menu End -->
+                <!-- Main Menu Start -->
+                <div class="collapse navbar-collapse main-menu">
+                    <ul class="navbar-nav mr-auto" id="menu">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">{% trans "Asosiy" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">{% trans "Xizmatlar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">{% trans "Aloqa" %}</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">
+                                {% with current_language=request.LANGUAGE_CODE %}
+                                    {% if current_language == "uz" %}
+                                        <img style="width: 44px;" src="{% static 'images/flag/uz.png' %}" alt="">
+                                    {% elif current_language == "en" %}
+                                        <img style="width: 44px;" src="{% static 'images/flag/uk.png' %}" alt="">
+                                    {% elif current_language == "ru" %}
+                                        <img style="width: 44px;" src="{% static 'images/flag/russia.png' %}" alt="">
+                                    {% endif %}
+                                {% endwith %}
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'set-language' 'uz' %}">
+                                        <img style="width: 44px;" src="{% static 'images/flag/uz.png' %}" alt="">
+                                        Uzbek
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'set-language' 'en' %}">
+                                        <img style="width: 44px;" src="{% static 'images/flag/uk.png' %}" alt="">
+                                        English
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'set-language' 'ru' %}">
+                                        <img style="width: 44px;" src="{% static 'images/flag/russia.png' %}" alt="">
+                                        Russian
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!-- Main Menu End -->
 
                 <!--Get Contact Us Start-->
                 <div class="header-contact-us">
                     <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                        <h3>Call Anytime <span>808 707 6060</span></h3></a>
+                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
                 </div>
                 <!--Get Contact Us End-->
 
@@ -129,11 +176,11 @@
             <div class="col-lg-12">
                 <!-- Page Header box Start -->
                 <div class="page-header-box">
-                    <h2 class="text-anime-style-3">Service</h2>
+                    <h2 class="text-anime-style-3">{% trans "Xizmatlar" %}</h2>
                     <nav class="wow fadeInUp" data-wow-delay="0.25s">
                         <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li> Service</li>
+                            <li><a href="{% url 'index' %}">{% trans "Asosiy" %}</a></li>
+                            <li> {% trans "Xizmatlar" %}</li>
                         </ol>
                     </nav>
                 </div>
@@ -148,185 +195,40 @@
 <div class="service-page">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="0.25s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-1.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
+            {% for service in services %}
+                <div class="col-lg-4 col-md-6">
+                    <!-- Our Service Item Start -->
+                    <div class="our-service-item wow fadeInUp" data-wow-delay="1.25s">
+                        <!-- Our Service Image Start -->
+                        <div class="our-service-image">
+                            <figure class="image-anime">
+                                <img src="{{ service.image.url }}" alt="">
+                            </figure>
+                        </div>
+                        <!-- Our Service Image End -->
 
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-1.svg" %}" alt="">
+                        <!-- Our Service Content Start -->
+                        <div class="our-service-content">
+                            <div class="service-content-box">
+                                <div class="our-service-icon">
+                                    <img src="{{ service.main_image }}" alt="">
+                                </div>
+                                <div class="our-service-icon">
+                                    <img style="width: 34px" src="{{ service.icon.url }}" alt="">
+                                </div>
+                                <div class="our-service-title">
+                                    <h2>{{ service.title }}</h2>
+                                </div>
                             </div>
-                            <div class="our-service-title">
-                                <h2>Ocean Freight</h2>
+                            <div class="our-service-content-button">
+                                <a href="#"><i class="fa-regular fa-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
+                        <!-- Our Service Content End -->
                     </div>
-                    <!-- Our Service Content End -->
+                    <!-- Our Service Item End -->
                 </div>
-                <!-- Our Service Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="0.5s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-2.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
-
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-2.svg" %}" alt="">
-                            </div>
-                            <div class="our-service-title">
-                                <h2>air Freight</h2>
-                            </div>
-                        </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Our Service Content End -->
-                </div>
-                <!-- Our Service Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="0.75s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-3.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
-
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-3.svg" %}" alt="">
-                            </div>
-                            <div class="our-service-title">
-                                <h2>cargo Freight</h2>
-                            </div>
-                        </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Our Service Content End -->
-                </div>
-                <!-- Our Service Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="1s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-4.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
-
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-2.svg" %}" alt="">
-                            </div>
-                            <div class="our-service-title">
-                                <h2>express delivery</h2>
-                            </div>
-                        </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Our Service Content End -->
-                </div>
-                <!-- Our Service Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="1.25s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-5.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
-
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-3.svg" %}" alt="">
-                            </div>
-                            <div class="our-service-title">
-                                <h2>customs clearance</h2>
-                            </div>
-                        </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Our Service Content End -->
-                </div>
-                <!-- Our Service Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="1.5s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{% static "images/service-6.jpg" %}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
-
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img src="{% static "images/icon-cargo-1.svg" %}" alt="">
-                            </div>
-                            <div class="our-service-title">
-                                <h2>project cargo</h2>
-                            </div>
-                        </div>
-                        <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Our Service Content End -->
-                </div>
-                <!-- Our Service Item End -->
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -344,24 +246,27 @@
                         <!-- Footer Heading Start -->
                         <div class="footer-heading">
                             <figure>
-                                <img src="{% static "images/footer-logo.svg" %}" alt="">
+                                <img style="width: 120px" src="{% static "images/logo.png" %}" alt="">
                             </figure>
                         </div>
                         <!-- Footer Heading End -->
 
                         <!-- Footer Content Start -->
                         <div class="footer-content">
-                            <p>we understand that the world of logistics is complex and ever-changing.</p>
+                            <p>{% trans "VCHD - 8. 1936 yil - Qarshi Vagon Deposi." %}</p>
                         </div>
                         <!-- Footer Content End -->
 
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-link">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
+                              <ul>
+                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                            class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
                         </div>
                         <!-- Footer Social Link End -->
                     </div>
@@ -372,14 +277,15 @@
                     <!-- Footer links Start -->
                     <div class="footer-links">
                         <div class="footer-info-heading">
-                            <h2>Quick Links</h2>
+                            <h2>{% trans "Havolalar" %}</h2>
                         </div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{% url 'index' %}">{% trans "Asosiy" %}</a></li>
+                            <li><a href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
+                            <li><a href="{% url 'service' %}">{% trans "Xizmatlar" %}</a></li>
+                            <li><a href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a></li>
+                            <li><a href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
+                            <li><a href="{% url 'contact' %}">{% trans "Aloqa" %}</a></li>
                         </ul>
                     </div>
                     <!-- Footer links End -->
@@ -390,7 +296,7 @@
                     <div class="footer-contact-info">
                         <!-- footer info heading Start -->
                         <div class="footer-info-heading">
-                            <h2>Contact Us</h2>
+                            <h2>{% trans "Biz bilan bog'lanish" %}</h2>
                         </div>
                         <!-- footer info heading End -->
 
@@ -401,7 +307,7 @@
                                     <i class="fa-regular fa-envelope"></i>
                                 </div>
 
-                                <p>info@domain.com</p>
+                                <p> vchdkarshi@mail.ru</p>
                             </div>
 
                             <div class="footer-info-box">
@@ -409,7 +315,7 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
 
-                                <p>121 King Street, Melbourne</p>
+                                <p>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}</p>
                             </div>
 
                             <div class="footer-info-box">
@@ -417,45 +323,53 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
 
-                                <p>808 707 6060</p>
+                                <p>+998 90 517 30 07</p>
+                            </div>
+                            <div class="footer-info-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+
+                                <p>{% trans "Ish vaqti : 16:00 dan 18:00 gacha" %}</p>
                             </div>
                         </div>
                         <!-- Footer Contact Info Box End -->
+
                     </div>
                 </div>
                 <!-- Footer Contact Info End -->
 
-                <!-- Subscribe Newsletters Start  -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- footer info heading Start -->
-                    <div class="footer-info-heading">
-                        <h2>News Letter</h2>
-                    </div>
-                    <!-- footer info heading End -->
-
-                    <!-- Newsletters Content Start -->
-                    <div class="newsletters-content">
-                        <p>Join our newsletter community to receive regular updates on the topics that matter to
-                            you.</p>
-                    </div>
-                    <!-- Newsletters Content End -->
-
-                    <!-- Newsletters Form Start -->
-                    <div class="newsletters-form">
-                        <form id="newslettersForm" action="#" class="mail-box">
-                            <div class="row no-gutters">
-                                <div class="form-group col-11">
-                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>
-                                </div>
-                                <div class="col-1">
-                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Newsletters Form End -->
-                </div>
-                <!-- Subscribe Newsletters End  -->
+                {#                <!-- Subscribe Newsletters Start  -->#}
+                {#                <div class="col-lg-3 col-md-6 col-12">#}
+                {#                    <!-- footer info heading Start -->#}
+                {#                    <div class="footer-info-heading">#}
+                {#                        <h2>News Letter</h2>#}
+                {#                    </div>#}
+                {#                    <!-- footer info heading End -->#}
+                {##}
+                {#                    <!-- Newsletters Content Start -->#}
+                {#                    <div class="newsletters-content">#}
+                {#                        <p>Join our newsletter community to receive regular updates on the topics that matter to#}
+                {#                            you.</p>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Content End -->#}
+                {##}
+                {#                    <!-- Newsletters Form Start -->#}
+                {#                    <div class="newsletters-form">#}
+                {#                        <form id="newslettersForm" action="#" class="mail-box">#}
+                {#                            <div class="row no-gutters">#}
+                {#                                <div class="form-group col-11">#}
+                {#                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
+                {#                                </div>#}
+                {#                                <div class="col-1">#}
+                {#                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </form>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Form End -->#}
+                {#                </div>#}
+                {#                <!-- Subscribe Newsletters End  -->#}
             </div>
         </div>
     </div>
@@ -470,24 +384,25 @@
             <div class="col-lg-6 col-md-7 col-12">
                 <!-- Footer Copyright Content Start -->
                 <div class="footer-copyright">
-                    <p>Copyright 2024 <b>AeroLogix.</b> All Right Reserved.</p>
+                    <p>{% trans "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan." %}</p>
                 </div>
                 <!-- Footer Copyright Content End -->
             </div>
-            <div class="col-lg-6 col-md-5 col-12">
-                <!-- Footer Policy Links Start -->
-                <div class="footer-policy-links">
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <!-- Footer Policy Links End -->
-            </div>
+            {#                <div class="col-lg-6 col-md-5 col-12">#}
+            {#                    <!-- Footer Policy Links Start -->#}
+            {#                    <div class="footer-policy-links">#}
+            {#                        <ul>#}
+            {#                            <li><a href="#">Privacy Policy</a></li>#}
+            {#                            <li><a href="#">Terms of Service</a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                    <!-- Footer Policy Links End -->#}
+            {#                </div>#}
         </div>
     </div>
 </div>
 <!-- Footer Copyright Section End -->
+
 
 <!-- Jquery Library File -->
 <script src="{% static "js/jquery-3.7.1.min.js" %}"></script>

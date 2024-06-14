@@ -1,6 +1,6 @@
 from modeltranslation.translator import TranslationOptions, register
 
-from .models import Banner, Blog, About, Service, OurResult
+from .models import Banner, Blog, About, Service, OurResult, History, Management
 
 
 @register(Banner)
@@ -10,7 +10,7 @@ class BannerTranslationOptions(TranslationOptions):
 
 @register(Blog)
 class BlogTranslationOptions(TranslationOptions):
-    fields = ('title', 'description', "text")
+    fields = ('title', 'description', "text","slug")
 
 
 @register(About)
@@ -28,19 +28,11 @@ class OurResultTranslationOptions(TranslationOptions):
     fields = ('title',)
 
 
+@register(History)
+class HistoryTranslationOptions(TranslationOptions):
+    fields = ("title", "description",)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@register(Management)
+class ManagementTranslationOptions(TranslationOptions):
+    fields = ("position", "admission_days" ,)

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 
-from app.models import Banner, Blog, About, Service, OurResult
+from app.models import Banner, Blog, About, Service, OurResult, Gallery, History, Management
 
 
 # Register your models here.
@@ -29,8 +29,9 @@ class BannerAdmin(CustomTranslationAdmin):
 
 @admin.register(Blog)
 class BlogAdmin(CustomTranslationAdmin):
-    list_display = ['title', 'description', "text", 'image']
+    list_display = ['title', 'description', "text", 'image', "created_at"]
     list_display_links = ['title']
+    prepopulated_fields = {"slug": ('title',)}
     list_filter = ['title', 'description']
     search_fields = ['title', 'description']
 
@@ -59,15 +60,20 @@ class OurResultAdmin(CustomTranslationAdmin):
     search_fields = ['title', 'number']
 
 
+@admin.register(History)
+class HistoryAdmin(CustomTranslationAdmin):
+    list_display = ['title', 'description']
+    list_display_links = ['title']
+    list_filter = ['title', 'description', ]
+    search_fields = ['title', 'description']
 
 
+@admin.register(Management)
+class ManagementAdmin(CustomTranslationAdmin):
+    list_display = ['image', "fullname", "position", "admission_days"]
+    list_display_links = ['fullname']
+    list_filter = ['fullname', "position"]
+    search_fields = ['fullname', "position"]
 
 
-
-
-
-
-
-
-
-
+admin.site.register(Gallery)
