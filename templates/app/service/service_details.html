@@ -64,7 +64,7 @@
                                 class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}
                         </a>
                         </li>
-                        <li><a href="#"><i class="fa-solid fa-at"></i>  vchdkarshi@mail.ru</a></li>
+                        <li><a href="#"><i class="fa-solid fa-at"></i> vchdkarshi@mail.ru</a></li>
                     </ul>
                 </div>
                 <!-- Topbar Contact Information End -->
@@ -73,14 +73,14 @@
             <div class="col-lg-3 col-md-4">
                 <!-- Topbar Social Links Start -->
                 <div class="topbar-social-links">
-                        <ul>
+                    <ul>
                         <li><a href="https://t.me/vchdqarshi" target="_blank"><i
                                 class="fa-brands fa-telegram"></i></a></li>
                         <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
                                 class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
                                 class="fa-brands fa-facebook"></i></a></li>
-                        </ul>
+                    </ul>
                 </div>
                 <!-- Topbar Social Links End -->
             </div>
@@ -176,11 +176,11 @@
             <div class="col-lg-12">
                 <!-- Page Header box Start -->
                 <div class="page-header-box">
-                    <h2 class="text-anime-style-3">Ocean Freight</h2>
+                    <h2 class="text-anime-style-3">{{ service.title }}</h2>
                     <nav class="wow fadeInUp" data-wow-delay="0.25s">
                         <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li> Ocean Freight</li>
+                            <li><a href="{% url 'index' %}">{% trans "Asosiy" %}</a></li>
+                            <li> {{ service.title }}</li>
                         </ol>
                     </nav>
                 </div>
@@ -201,55 +201,16 @@
                     <!-- Service Details image Start -->
                     <div class="service-details-featured-image">
                         <figure class="reveal image-anime">
-                            <img src="{% static "images/service-1.jpg" %}" alt="">
+                            <img src="{{ service.image.url }}" alt="">
                         </figure>
                     </div>
                     <!-- Service Details image End -->
 
                     <!-- Service Details body Start -->
                     <div class="service-details-body">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.25s">Extensive Experience</h2>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.25s">{{ service.title }}</h2>
 
-                        <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the k a galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but</p>
-
-                        <div class="service-body-list wow fadeInUp" data-wow-delay="0.75s">
-                            <div class="service-info-box">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-circle-check"></i>
-                                </div>
-
-                                <p>Transportation of cargo by air, offering speed and global reach</p>
-                            </div>
-
-                            <div class="service-info-box">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-circle-check"></i>
-                                </div>
-
-                                <p>Shipping cargo via ocean vessels, large volumes and long-distance transportation.
-                                <p>
-                            </div>
-
-                            <div class="service-info-box">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-circle-check"></i>
-                                </div>
-
-                                <p>Land-based transportation of cargo using trucks for regional and domestic shipments.
-                                <p>
-                            </div>
-
-                            <div class="service-info-box">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-circle-check"></i>
-                                </div>
-
-                                <p>Assistance with customs documentation and procedures for import and export of goods.
-                                <p>
-                            </div>
-                        </div>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">{{ service.description }}</p>
                     </div>
                     <!-- Service Details body End -->
 
@@ -257,13 +218,13 @@
                     <div class="service-details-footer">
                         <div class="service-details-image-box wow fadeInUp" data-wow-delay="0.25s">
                             <figure class="image-anime">
-                                <img src="{% static "images/service-2.jpg" %}" alt="">
+                                <img src="{{ service.mini_image.url }}" alt="">
                             </figure>
                         </div>
 
                         <div class="service-details-image-box wow fadeInUp" data-wow-delay="0.5s">
                             <figure class="image-anime">
-                                <img src="{% static "images/service-3.jpg" %}" alt="">
+                                <img src="{{ service.mini_image2.url }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -277,14 +238,13 @@
                     <!-- Post Category List Start -->
                     <div class="post-Category-list wow fadeInUp" data-wow-delay="0.25s">
                         <div class="footer-info-heading">
-                            <h2>Logistics Services</h2>
+                            <h2>{% trans "Boshqa xizmatlar" %}</h2>
                         </div>
                         <ul>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Transport</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Shipping</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Cargo Transport</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Port</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Air Transport</a></li>
+                            {% for service in services %}
+                                <li><a href="{% url 'service_details' service.id %}"><i class="fa-solid fa-right-long"></i> {{ service.title }}</a></li>
+
+                            {% endfor %}
                         </ul>
                     </div>
                     <!-- Post Category List End -->
@@ -292,18 +252,19 @@
                     <!-- Service Logistics Card Start -->
                     <div class="service-logistics-card wow fadeInUp" data-wow-delay="0.5s">
                         <div class="logistics-card-image">
-                            <img src="{% static "images/logo.svg" %}" alt="">
+                            <img style="width: 100px" src="{% static "images/logo.png" %}" alt="">
                         </div>
                         <div class="logistics-card-title">
-                            <h2>Need Help ?</h2>
-                            <p>Got questions or need assistance with your logistics needs? Our team is here to help.</p>
+                            <h2>{% trans "Yordam kerakmi ? " %}</h2>
+                            <p>{% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !" %}</p>
                         </div>
                         <div class="logistics-card-body">
-                            <a href="#" class="btn-default">contact us</a>
+                            <a href="{% url "contact" %}" class="btn-default">{% trans "Bog'lanish" %}</a>
                             <!--Get Contact Us Start-->
-                            <div class="header-contact-us">
+                            <div class="header-contact-us" style="margin-left: 12px">
                                 <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                                    <h3>Call Anytime <span>808 707 6060</span></h3></a>
+                                    <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %} <span>+998 90 517 30 07</span>
+                                    </h3></a>
                             </div>
                             <!--Get Contact Us End-->
                         </div>
@@ -420,7 +381,7 @@
 
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>

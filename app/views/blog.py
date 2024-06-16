@@ -16,6 +16,8 @@ def blog_view(request):
 
 def blog_details(request, news):
     blog = get_object_or_404(Blog, slug=news)
+    latest_blogs = Blog.objects.order_by("-created_at")[:3]
     return render(request=request,
                   template_name="app/blog/blog_details.html",
-                  context={"blog": blog})
+                  context={"blog": blog,
+                           "latest_blogs": latest_blogs})

@@ -15,8 +15,8 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static "images/logo.png" %}">
     <!-- Google Fonts Css-->
-    <link rel="preconnect" href="{% static "fonts.googleapis.com/{%url 'index'}" %}">
-    <link rel="preconnect" href="{% static "fonts.gstatic.com/{%url 'index'}" %}" crossorigin>
+    <link rel="preconnect" href="{% static "fonts.googleapis.com/index.html" %}">
+    <link rel="preconnect" href="{% static "fonts.gstatic.com/index.html" %}" crossorigin>
     <link href="{% static "fonts.googleapis.com/css244c5.css" %}?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
           rel="stylesheet">
     <!-- Bootstrap Css -->
@@ -176,11 +176,11 @@
             <div class="col-lg-12">
                 <!-- Page Header box Start -->
                 <div class="page-header-box">
-                    <h2 class="text-anime-style-3">Overcoming Challenges in International Freight Forwarding</h2>
+                    <h2 class="text-anime-style-3">{% trans "Yangilik tafsiloti" %}</h2>
                     <div class="post-single-meta wow fadeInUp" data-wow-delay="0.25s">
                         <ul>
-                            <li>Fab 26, 2024</li>
-                            <li>cargo ship</li>
+                            <li>{{ blog.created_at }}</li>
+                            <li>{{ blog.title }}</li>
                         </ul>
                     </div>
                 </div>
@@ -201,32 +201,18 @@
                     <!-- Blog Detail Featured Image Start -->
                     <div class="blog-detail-featured-image">
                         <figure class="reveal image-anime">
-                            <img src="{% static "images/post-1.jpg" %}" alt="">
+                            <img src="{{ blog.image.url }}" alt="">
                         </figure>
                     </div>
                     <!-- Blog Detail Featured Image End -->
 
                     <!-- Blog Detail Post Content Start -->
                     <div class="blog-detail-post-content wow fadeInUp" data-wow-delay="0.75s">
-                        <p>One of the most significant advancements in transport and logistics is the integration of
-                            automation technologies. Automated systems can handle repetitive tasks, such as inventory
-                            management, order processing, and route planning, with higher speed and accuracy than human
-                            operators. Implementing automation not only reduces human errors but also enables your
-                            workforce to focus on more complex and strategic activities.</p>
+                        <p>{{ blog.description }}</p>
 
-                        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.</p>
+                        <h3>{{ blog.title }}</h3>
 
-                        <h3>Embrace Automation</h3>
-
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        <p>{{ blog.text }}</p>
                     </div>
                     <!-- Blog Detail Post Content End -->
 
@@ -235,7 +221,7 @@
                         <div class="col-lg-8">
                             <!-- Post Tags Start -->
                             <div class="post-tags wow fadeInUp" data-wow-delay="0.25s">
-                                <a href="#">02.12.2020</a>
+                                <a href="#">{{ blog.created_at }}</a>
                                 {#                                <a href="#">air freight</a>#}
                                 {#                                <a href="#">transport</a>#}
                             </div>
@@ -245,7 +231,7 @@
                         <div class="col-lg-4">
                             <!-- Post Sharing Links Start -->
                             <div class="post-social-links wow fadeInUp" data-wow-delay="0.25s">
-                                 <ul>
+                                <ul>
                                     <li><a href="https://t.me/vchdqarshi" target="_blank"><i
                                             class="fa-brands fa-telegram"></i></a></li>
                                     <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
@@ -264,95 +250,65 @@
             <div class="col-lg-4  col-md-12">
                 <!-- Service Details sidebar Start -->
                 <div class="service-details-sidebar">
-                    <!-- Post Category List Start -->
-                    <div class="post-Category-list blog-details-list wow fadeInUp" data-wow-delay="0.25s">
-                        <div class="footer-info-heading">
-                            <h2>Logistics Services</h2>
-                        </div>
-                        <ul>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Transport</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Shipping</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Cargo Transport</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Port</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Air Transport</a></li>
-                        </ul>
-                    </div>
+                    {#                    <!-- Post Category List Start -->#}
+                    {#                    <div class="post-Category-list blog-details-list wow fadeInUp" data-wow-delay="0.25s">#}
+                    {#                        <div class="footer-info-heading">#}
+                    {#                            <h2>Logistics Services</h2>#}
+                    {#                        </div>#}
+                    {#                        <ul>#}
+                    {#                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Transport</a></li>#}
+                    {#                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Shipping</a></li>#}
+                    {#                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Cargo Transport</a></li>#}
+                    {#                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Port</a></li>#}
+                    {#                            <li><a href="#"><i class="fa-solid fa-right-long"></i> Air Transport</a></li>#}
+                    {#                        </ul>#}
+                    {#                    </div>#}
                     <!-- Post Category List End -->
 
 
                     <div class="blog-details-post-widget wow fadeInUp" data-wow-delay="0.5s">
                         <div class="footer-info-heading">
-                            <h2>Latest News</h2>
+                            <h2>{% trans "So'ngi yangiliklar" %}</h2>
                         </div>
                         <div class="post-widget-body">
                             <!-- Recent Post Item Start -->
-                            <div class="recent-post-item">
-                                <div class="recent-post-feature-img">
-                                    <figure>
-                                        <a href="#"><img src="{% static "images/post-2.jpg" %}" alt="img"></a>
-                                    </figure>
-                                </div>
+                            {% for blog in latest_blogs %}
+                                <div class="recent-post-item">
+                                    <div class="recent-post-feature-img">
+                                        <figure>
+                                            <a href="#"><img src="{{ blog.image.url }}" alt="img"></a>
+                                        </figure>
+                                    </div>
 
-                                <div class="recent-post-content">
-                                    <h3><a href="#">Why Hiring a Professional Cleaning Service is Worth</a></h3>
-                                    <div class="post-readmore">
-                                        <a href="#">Read More</a>
+                                    <div class="recent-post-content">
+                                        <h3><a href="#">{{ blog.title }}</a></h3>
+                                        <div class="post-readmore">
+                                            <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            {% endfor %}
                             <!-- Recent Post Item End -->
 
-                            <!-- Recent Post Item Start -->
-                            <div class="recent-post-item">
-                                <div class="recent-post-feature-img">
-                                    <figure>
-                                        <a href="#"><img src="{% static "images/post-3.jpg" %}" alt="img"></a>
-                                    </figure>
-                                </div>
-
-                                <div class="recent-post-content">
-                                    <h3><a href="#">The Ultimate Guide to a Spotless Home</a></h3>
-                                    <div class="post-readmore">
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item End -->
-
-                            <!-- Recent Post Item Start -->
-                            <div class="recent-post-item">
-                                <div class="recent-post-feature-img">
-                                    <figure>
-                                        <a href="#"><img src="{% static "images/post-4.jpg" %}" alt="img"></a>
-                                    </figure>
-                                </div>
-
-                                <div class="recent-post-content">
-                                    <h3><a href="#">Are your cleaners trained and experienced?</a></h3>
-                                    <div class="post-readmore">
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent Post Item End -->
                         </div>
                     </div>
 
                     <!-- Service Logistics Card Start -->
                     <div class="service-logistics-card wow fadeInUp" data-wow-delay="0.75s">
                         <div class="logistics-card-image">
-                            <img src="{% static "images/logo.svg" %}" alt="">
+                            <img style="width: 100px" src="{% static "images/logo.png" %}" alt="">
                         </div>
                         <div class="logistics-card-title">
-                            <h2>Need Help ?</h2>
-                            <p>Got questions or need assistance with your logistics needs? Our team is here to help.</p>
+                            <h2>{% trans "Yordam kerakmi ? " %}</h2>
+                            <p>{% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !" %}</p>
                         </div>
                         <div class="logistics-card-body">
-                            <a href="#" class="btn-default">Contact Us</a>
+                            <a href="{% url 'contact' %}" class="btn-default">{% trans "Bog'lanish" %}</a>
                             <!--Get Contact Us Start-->
-                            <div class="header-contact-us">
+                            <div class="header-contact-us" style="margin-left: 12px">
                                 <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                                    <h3>Call Anytime <span>808 707 6060</span></h3></a>
+                                    <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %} <span>+998 90 517 30 07</span>
+                                    </h3></a>
                             </div>
                             <!--Get Contact Us End-->
                         </div>
@@ -392,13 +348,13 @@
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-link">
                             <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                                <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                        class="fa-brands fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                        class="fa-brands fa-facebook"></i></a></li>
+                            </ul>
                         </div>
                         <!-- Footer Social Link End -->
                     </div>

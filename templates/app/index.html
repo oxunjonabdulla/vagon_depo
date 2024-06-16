@@ -229,7 +229,7 @@
                         <h3>{{ blog.title }}</h3>
                         <p>{{ blog.description|truncatewords:10 }}</p>
                         <div class="cargo-shipment-readmore">
-                            <a href="#">{% trans "Ko'roq o'qish" %}</a>
+                            <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                     <!-- Home Transportation footer Start -->
                     <div class="home-transportation-footer wow fadeInUp" data-wow-delay="0.75s">
                         <div class="transportation-footer-btn">
-                            <a href="#" class="btn-default">{% trans "Batafsil" %}</a>
+                            <a href="{% url 'about' %}" class="btn-default">{% trans "Batafsil" %}</a>
                         </div>
                         <div class="header-contact-us">
                             <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
@@ -292,7 +292,7 @@
 
                     <!-- Facts Counter Box Start -->
                     <div class="transportation-counter-box wow fadeInUp" data-wow-delay="0.5s">
-                        <h3><span class="counter">1936</span> yil</h3>
+                        <h3><span class="counter">88</span> {% trans "yil" %}</h3>
                         <p>{% trans "Ko'p yillik tajriba" %}</p>
                     </div>
                     <!-- Facts Counter Box End -->
@@ -341,7 +341,7 @@
                             </div>
                         </div>
                         <div class="our-service-content-button">
-                            <a href="#"><i class="fa-regular fa-circle-right"></i></a>
+                            <a href="{% url "service_details" service.id %}"><i class="fa-regular fa-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- Our Service Content End -->
@@ -352,7 +352,7 @@
             {% endfor %}
             <!-- Our Service Footer Start -->
             <div class="our-service-footer wow fadeInUp" data-wow-delay="1s">
-                <a href="#" class="btn-default">{% trans "Hamma xizmatlar" %}</a>
+                <a href="{% url "service" %}" class="btn-default">{% trans "Hamma xizmatlar" %}</a>
             </div>
             <!-- Our Service Footer End -->
         </div>
@@ -538,7 +538,7 @@
                             </ul>
                         </div>
                         <div class="post-readmore">
-                            <a href="#">{% trans "Ko'roq o'qish" %}</a>
+                            <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
                         </div>
                     </div>
                     <!-- Post Body End -->

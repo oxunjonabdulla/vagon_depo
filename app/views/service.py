@@ -12,6 +12,14 @@ def service_view(request):
     )
 
 
-def service_details(request):
+def service_details(request, id):
+    service = Service.objects.filter(id=id).first()
+    services = Service.objects.all()
+    services_list = []
+    for i in services:
+        if service !=i:
+            services_list.append(i)
     return render(request=request,
-                  template_name="app/service/service_details.html")
+                  template_name="app/service/service_details.html",
+                  context={"service": service,
+                           "services":services_list})
