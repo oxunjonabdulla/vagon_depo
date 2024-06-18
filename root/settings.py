@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 from decouple import config
 from django.utils.translation import gettext_lazy as _
 
@@ -9,8 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = 'django-insecure-3bkeglq8^7&f_z4hoas=!2%2@4vk2_foti#0qv7)%qca^tum2='
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -64,13 +65,12 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # DATABASES = {
@@ -83,10 +83,6 @@ WSGI_APPLICATION = 'root.wsgi.application'
 #         "PORT": "5432",
 #     }
 # }
-
-
-
-
 
 
 # Password validation
