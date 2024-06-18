@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 from decouple import config
 from django.utils.translation import gettext_lazy as _
 
@@ -72,17 +73,16 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # }
 
 
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "vchd",
-#         "USER": "postgres",
-#         "PASSWORD": "22",
-#         "HOST": "127.0.0.1",
-#         "PORT": "5432",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
+    }
+}
 
 
 
