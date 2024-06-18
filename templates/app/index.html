@@ -61,7 +61,8 @@
                 <div class="topbar-contact-info">
                     <ul>
                         <li><a href="#"><i
-                                class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}</a>
+                                class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}
+                        </a>
                         </li>
                         <li><a href="#"><i class="fa-solid fa-at"></i> vchdkarshi@mail.ru</a></li>
                     </ul>
@@ -72,14 +73,14 @@
             <div class="col-lg-3 col-md-4">
                 <!-- Topbar Social Links Start -->
                 <div class="topbar-social-links">
-                     <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                    <ul>
+                        <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                class="fa-brands fa-telegram"></i></a></li>
+                        <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
                 </div>
                 <!-- Topbar Social Links End -->
             </div>
@@ -103,10 +104,14 @@
                     <ul class="navbar-nav mr-auto" id="menu">
                         <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">{% trans "Asosiy" %}</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">{% trans "Xizmatlar" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">{% trans "Xizmatlar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">{% trans "Aloqa" %}</a></li>
 
                         <li class="nav-item">
@@ -151,7 +156,7 @@
                 <!--Get Contact Us Start-->
                 <div class="header-contact-us">
                     <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
+                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 75 227 01 53</span></h3></a>
                 </div>
                 <!--Get Contact Us End-->
 
@@ -193,7 +198,8 @@
                                                 <p>{{ banner.description }}</p>
                                             </div>
                                             <div class="hero-content-footer">
-                                                <a href="{% url 'about' %}" class="btn-default">{% trans "Batafsil" %}</a>
+                                                <a href="{% url 'about' %}"
+                                                   class="btn-default">{% trans "Batafsil" %}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -217,24 +223,27 @@
     <div class="container">
         <div class="row no-gutters">
             {% for blog in latest_blogs %}
-            	     <div class="col-md-4">
-                <!-- Cargo Shipment Item Start -->
-                <div class="cargo-shipment-item wow fadeInUp" data-wow-delay="0.25s">
-                    <div class="cargo-shipment-image">
-                        <img src="{{ blog.image.url }}" alt="">
-                    </div>
-                    <div class="cargo-shipment-content">
-                        <div class="cargo-shipment-icon">
+                <div class="col-md-4">
+                    <!-- Cargo Shipment Item Start -->
+                    <div class="cargo-shipment-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="cargo-shipment-image">
+                            {% if blog.image %}
+                                <img src="{{ blog.image.url }}" alt="">
+
+                            {% endif %}
                         </div>
-                        <h3>{{ blog.title }}</h3>
-                        <p>{{ blog.description|truncatewords:10 }}</p>
-                        <div class="cargo-shipment-readmore">
-                            <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
+                        <div class="cargo-shipment-content">
+                            <div class="cargo-shipment-icon">
+                            </div>
+                            <h3>{{ blog.title }}</h3>
+                            <p>{{ blog.description|truncatewords:10 }}</p>
+                            <div class="cargo-shipment-readmore">
+                                <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Cargo Shipment Item End -->
                 </div>
-                <!-- Cargo Shipment Item End -->
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -267,7 +276,8 @@
                         </div>
                         <div class="header-contact-us">
                             <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                                <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
+                                <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 75 227 01 53</span></h3>
+                            </a>
                         </div>
                     </div>
                     <!-- Home Transportation footer End -->
@@ -292,7 +302,7 @@
 
                     <!-- Facts Counter Box Start -->
                     <div class="transportation-counter-box wow fadeInUp" data-wow-delay="0.5s">
-                        <h3><span class="counter">88</span> {% trans "yil" %}</h3>
+                        <h3><span class="counter">88</span> +</h3>
                         <p>{% trans "Ko'p yillik tajriba" %}</p>
                     </div>
                     <!-- Facts Counter Box End -->
@@ -311,7 +321,8 @@
             <!-- Section Title Start -->
             <div class="section-title">
                 <h2 class="text-anime-style-3">{% trans "<span>Bizning xizmatlar </span> bilan tanishing" %}</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.25s">{% trans "Bizning katta yutuqlarga erishishimizga asosiy sabab bu - sifatli xizmatlarmizdir.Xizmatlarimiz bilan tanishing !" %}</p>
+                <p class="wow fadeInUp"
+                   data-wow-delay="0.25s">{% trans "Bizning katta yutuqlarga erishishimizga asosiy sabab bu - sifatli xizmatlarimizdir.Xizmatlarimiz bilan tanishing !" %}</p>
             </div>
             <!-- Section Title End -->
         </div>
@@ -319,35 +330,36 @@
         <div class="row">
             {% for service in services %}
 
-            <div class="col-lg-4 col-md-6">
-                <!-- Our Service Item Start -->
-                <div class="our-service-item wow fadeInUp" data-wow-delay="0.25s">
-                    <!-- Our Service Image Start -->
-                    <div class="our-service-image">
-                        <figure class="image-anime">
-                            <img src="{{ service.image.url }}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Service Image End -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- Our Service Item Start -->
+                    <div class="our-service-item wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Our Service Image Start -->
+                        <div class="our-service-image">
+                            <figure class="image-anime">
+                                <img src="{{ service.image.url }}" alt="">
+                            </figure>
+                        </div>
+                        <!-- Our Service Image End -->
 
-                    <!-- Our Service Content Start -->
-                    <div class="our-service-content">
-                        <div class="service-content-box">
-                            <div class="our-service-icon">
-                                <img style="width: 34px" src="{{ service.icon.url }}" alt="">
+                        <!-- Our Service Content Start -->
+                        <div class="our-service-content">
+                            <div class="service-content-box">
+                                <div class="our-service-icon">
+                                    <img style="width: 34px" src="{{ service.icon.url }}" alt="">
+                                </div>
+                                <div class="our-service-title">
+                                    <h2>{{ service.title }}</h2>
+                                </div>
                             </div>
-                            <div class="our-service-title">
-                                <h2>{{ service.title }}</h2>
+                            <div class="our-service-content-button">
+                                <a href="{% url "service_details" service.id %}"><i
+                                        class="fa-regular fa-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="our-service-content-button">
-                            <a href="{% url "service_details" service.id %}"><i class="fa-regular fa-circle-right"></i></a>
-                        </div>
+                        <!-- Our Service Content End -->
                     </div>
-                    <!-- Our Service Content End -->
+                    <!-- Our Service Item End -->
                 </div>
-                <!-- Our Service Item End -->
-            </div>
 
             {% endfor %}
             <!-- Our Service Footer Start -->
@@ -372,9 +384,10 @@
                     </div>
                     <div class="our-contract-body">
                         <p class="wow fadeInUp" data-wow-delay="0.25s">
-                        {% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !" %}
+                            {% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !" %}
                         </p>
-                        <a href="{% url 'contact' %}" class="btn-default wow fadeInUp" data-wow-delay="0.5s">{% trans "Hoziroq bog'laning" %}</a>
+                        <a href="{% url 'contact' %}" class="btn-default wow fadeInUp"
+                           data-wow-delay="0.5s">{% trans "Hoziroq bog'laning" %}</a>
                     </div>
                 </div>
                 <!-- Our Cta Box End -->
@@ -391,7 +404,8 @@
             <!-- Section Title Start -->
             <div class="section-title">
                 <h2 class="text-anime-style-3">{% trans "Bizning <span> Galereya</span>" %}</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.25s">{% trans "Bizning galereya orqali, biz haqimizda to'liq ma'lumotga ega bo'ling !" %}</p>
+                <p class="wow fadeInUp"
+                   data-wow-delay="0.25s">{% trans "Bizning galereya orqali, biz haqimizda to'liq ma'lumotga ega bo'ling !" %}</p>
             </div>
             <!-- Section Title End -->
         </div>
@@ -401,25 +415,25 @@
                 <div class="project-slider">
                     <div class="swiper">
 
-                        	   <div class="swiper-wrapper">
-                                      {% for gallery in galleries %}
-                            <!-- recent projects slide Start -->
-                            <div class="swiper-slide">
-                                <div class="project-item">
-                                    <div class="project-image">
-                                        <figure class="image-anime">
-                                            <img src="{{ gallery.image.url }}" alt="">
-                                        </figure>
+                        <div class="swiper-wrapper">
+                            {% for gallery in galleries %}
+                                <!-- recent projects slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="project-item">
+                                        <div class="project-image">
+                                            <figure class="image-anime">
+                                                <img src="{{ gallery.image.url }}" alt="">
+                                            </figure>
+                                        </div>
+                                        {#                                    <div class="project-content">#}
+                                        {#                                        <div class="project-content-title">#}
+                                        {#                                            <h3><a href="#">Cargo Ship</a></h3>#}
+                                        {#                                            <span><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></span>#}
+                                        {#                                        </div>#}
+                                        {#                                    </div>#}
                                     </div>
-{#                                    <div class="project-content">#}
-{#                                        <div class="project-content-title">#}
-{#                                            <h3><a href="#">Cargo Ship</a></h3>#}
-{#                                            <span><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></span>#}
-{#                                        </div>#}
-{#                                    </div>#}
                                 </div>
-                            </div>
-                            <!-- recent projects slide End -->
+                                <!-- recent projects slide End -->
                             {% endfor %}
                         </div>
 
@@ -441,28 +455,29 @@
             <!-- Section Title Start -->
             <div class="section-title">
                 <h2 class="text-anime-style-3">{% trans "Bizning  natijalar <span> raqamlarda</span>" %}</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.25s">{% trans "Bizning ko'p yillik tajribamiz davomida erishgan natijalarimiz !" %}</p>
+                <p class="wow fadeInUp"
+                   data-wow-delay="0.25s">{% trans "Bizning ko'p yillik tajribamiz davomida erishgan natijalarimiz !" %}</p>
             </div>
             <!-- Section Title End -->
         </div>
 
         <div class="row">
             {% for result in our_results %}
-            	        <div class="col-lg-3 col-md-6">
-                <!-- Our Goals Item Start -->
-                <div class="our-goals-item wow fadeInUp" data-wow-delay="0.25s">
-                    <div class="counter-icon">
-                        <img style="width: 80px" src="{{ result.icon.url }}" alt="">
+                <div class="col-lg-3 col-md-6">
+                    <!-- Our Goals Item Start -->
+                    <div class="our-goals-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="counter-icon">
+                            <img style="width: 80px" src="{{ result.icon.url }}" alt="">
+                        </div>
+                        <!-- Facts Counter Box Start -->
+                        <div class="our-goals-counter">
+                            <h3><span class="counter">{{ result.number }}</span>+</h3>
+                            <p>{{ result.title }}</p>
+                        </div>
+                        <!-- Facts Counter Box End -->
                     </div>
-                    <!-- Facts Counter Box Start -->
-                    <div class="our-goals-counter">
-                        <h3><span class="counter">{{ result.number }}</span>+</h3>
-                        <p>{{ result.title  }}</p>
-                    </div>
-                    <!-- Facts Counter Box End -->
+                    <!-- Our Goals Item End -->
                 </div>
-                <!-- Our Goals Item End -->
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -511,40 +526,43 @@
             <!-- Section Title Start -->
             <div class="section-title">
                 <h2 class="text-anime-style-3">{% trans "Eng so'ngi <span>yangiliklar</span>" %}</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.25s">{% trans "Bizning yangiliklar orqali sohada bo'layotgan eng so'ngi o'zgarishlardan xabardor bo'lishingiz mumkin !" %}</p>
+                <p class="wow fadeInUp"
+                   data-wow-delay="0.25s">{% trans "Bizning yangiliklar orqali sohada bo'layotgan eng so'ngi o'zgarishlardan xabardor bo'lishingiz mumkin !" %}</p>
             </div>
             <!-- Section Title End -->
         </div>
 
         <div class="row">
             {% for blog in latest_blogs %}
-            	       <div class="col-lg-4 col-md-6">
-                <!-- Post Item Start -->
-                <div class="post-item wow fadeInUp" data-wow-delay="0.25s">
-                    <!-- Post Featured Image Start -->
-                    <div class="post-featured-image">
-                        <figure class="image-anime">
-                            <img src="{{ blog.image.url }}" alt="">
-                        </figure>
-                    </div>
-                    <!-- Post Featured Image End -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- Post Item Start -->
+                    <div class="post-item wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Post Featured Image Start -->
+                        <div class="post-featured-image">
+                            <figure class="image-anime">
+                                {% if blog.image %}
+                                    <img src="{{ blog.image.url }}" alt="">
+                                {% endif %}
+                            </figure>
+                        </div>
+                        <!-- Post Featured Image End -->
 
-                    <!-- Post Body Start -->
-                    <div class="post-body">
-                        <h3><a href="#">{{ blog.title }}</a></h3>
-                        <div class="post-meta">
-                            <ul>
-                                <li><a href="#"> {{ blog.created_at }}</a></li>
-                            </ul>
+                        <!-- Post Body Start -->
+                        <div class="post-body">
+                            <h3><a href="#">{{ blog.title }}</a></h3>
+                            <div class="post-meta">
+                                <ul>
+                                    <li><a href="#"> {{ blog.created_at }}</a></li>
+                                </ul>
+                            </div>
+                            <div class="post-readmore">
+                                <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
+                            </div>
                         </div>
-                        <div class="post-readmore">
-                            <a href="{% url 'blog_details' blog.slug %}">{% trans "Ko'roq o'qish" %}</a>
-                        </div>
+                        <!-- Post Body End -->
                     </div>
-                    <!-- Post Body End -->
+                    <!-- Post Item End -->
                 </div>
-                <!-- Post Item End -->
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -577,9 +595,12 @@
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-link">
                             <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                        class="fa-brands fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                        class="fa-brands fa-facebook"></i></a></li>
                             </ul>
                         </div>
                         <!-- Footer Social Link End -->
@@ -637,7 +658,7 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
 
-                                <p>+998 90 517 30 07</p>
+                                <p>+998 75 227 01 53</p>
                             </div>
                             <div class="footer-info-box">
                                 <div class="icon-box">
@@ -652,37 +673,37 @@
                 </div>
                 <!-- Footer Contact Info End -->
 
-{#                <!-- Subscribe Newsletters Start  -->#}
-{#                <div class="col-lg-3 col-md-6 col-12">#}
-{#                    <!-- footer info heading Start -->#}
-{#                    <div class="footer-info-heading">#}
-{#                        <h2>News Letter</h2>#}
-{#                    </div>#}
-{#                    <!-- footer info heading End -->#}
-{##}
-{#                    <!-- Newsletters Content Start -->#}
-{#                    <div class="newsletters-content">#}
-{#                        <p>Join our newsletter community to receive regular updates on the topics that matter to#}
-{#                            you.</p>#}
-{#                    </div>#}
-{#                    <!-- Newsletters Content End -->#}
-{##}
-{#                    <!-- Newsletters Form Start -->#}
-{#                    <div class="newsletters-form">#}
-{#                        <form id="newslettersForm" action="#" class="mail-box">#}
-{#                            <div class="row no-gutters">#}
-{#                                <div class="form-group col-11">#}
-{#                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
-{#                                </div>#}
-{#                                <div class="col-1">#}
-{#                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </form>#}
-{#                    </div>#}
-{#                    <!-- Newsletters Form End -->#}
-{#                </div>#}
-{#                <!-- Subscribe Newsletters End  -->#}
+                {#                <!-- Subscribe Newsletters Start  -->#}
+                {#                <div class="col-lg-3 col-md-6 col-12">#}
+                {#                    <!-- footer info heading Start -->#}
+                {#                    <div class="footer-info-heading">#}
+                {#                        <h2>News Letter</h2>#}
+                {#                    </div>#}
+                {#                    <!-- footer info heading End -->#}
+                {##}
+                {#                    <!-- Newsletters Content Start -->#}
+                {#                    <div class="newsletters-content">#}
+                {#                        <p>Join our newsletter community to receive regular updates on the topics that matter to#}
+                {#                            you.</p>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Content End -->#}
+                {##}
+                {#                    <!-- Newsletters Form Start -->#}
+                {#                    <div class="newsletters-form">#}
+                {#                        <form id="newslettersForm" action="#" class="mail-box">#}
+                {#                            <div class="row no-gutters">#}
+                {#                                <div class="form-group col-11">#}
+                {#                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
+                {#                                </div>#}
+                {#                                <div class="col-1">#}
+                {#                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </form>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Form End -->#}
+                {#                </div>#}
+                {#                <!-- Subscribe Newsletters End  -->#}
             </div>
         </div>
     </div>
@@ -690,31 +711,31 @@
 </footer>
 <!-- Main footer End -->
 
-    <!-- Footer Copyright Section Start -->
-    <div class="footer-copyright-links">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-7 col-12">
-                    <!-- Footer Copyright Content Start -->
-                    <div class="footer-copyright">
-                        <p>{% trans "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan." %}</p>
-                    </div>
-                    <!-- Footer Copyright Content End -->
+<!-- Footer Copyright Section Start -->
+<div class="footer-copyright-links">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7 col-12">
+                <!-- Footer Copyright Content Start -->
+                <div class="footer-copyright">
+                    <p>{% trans "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan." %}</p>
                 </div>
-{#                <div class="col-lg-6 col-md-5 col-12">#}
-{#                    <!-- Footer Policy Links Start -->#}
-{#                    <div class="footer-policy-links">#}
-{#                        <ul>#}
-{#                            <li><a href="#">Privacy Policy</a></li>#}
-{#                            <li><a href="#">Terms of Service</a></li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                    <!-- Footer Policy Links End -->#}
-{#                </div>#}
+                <!-- Footer Copyright Content End -->
             </div>
+            {#                <div class="col-lg-6 col-md-5 col-12">#}
+            {#                    <!-- Footer Policy Links Start -->#}
+            {#                    <div class="footer-policy-links">#}
+            {#                        <ul>#}
+            {#                            <li><a href="#">Privacy Policy</a></li>#}
+            {#                            <li><a href="#">Terms of Service</a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                    <!-- Footer Policy Links End -->#}
+            {#                </div>#}
         </div>
     </div>
-    <!-- Footer Copyright Section End -->
+</div>
+<!-- Footer Copyright Section End -->
 
 
 <!-- Jquery Library File -->

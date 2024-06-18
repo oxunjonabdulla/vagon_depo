@@ -1,14 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-12 11:32+0500\n"
+"POT-Creation-Date: 2024-06-17 10:05+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +12,152 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: templates/app/index.html:62
 
-msgid "Qarshi shahri. Ko'prik yon oldi"
-msgstr ""
+
+msgid "Ma'lumotlarni kiritishda xatolik sodir bo'ldi.Iltimos qayta kiriting"
+msgstr "An error occurred while entering the data. Please re-enter"
+
+msgid "Uzbek"
+msgstr "Uzbek"
+
+msgid "Russian"
+msgstr "Russian"
+
+msgid "English"
+msgstr "English"
+
+
+msgid "Qarshi shahri. Xorazm ko'cha 89-uy"
+msgstr "Qarshi city. 89 Khorezm street"
 
 
 msgid "Asosiy"
 msgstr "Main"
 
 
+msgid "Biz Haqimizda"
+msgstr "About Us"
+
+msgid "Xizmatlar"
+msgstr "Services"
+
+msgid "Yangiliklar"
+msgstr "News"
 
 
+msgid "Rahbariyat"
+msgstr "Management"
 
+msgid "Aloqa"
+msgstr "Contact"
 
+msgid "Istalgan vaqtda qo'ng'iroq qiling"
+msgstr "Call at any time"
 
+msgid "Sahifa topilmadi"
+msgstr "Page not found"
 
+msgid "Kechirasiz biz bu sahifani<span> topa olmadik!</span>"
+msgstr "Sorry, we <span>could not find this page!</span>"
 
+msgid "Asosiy sahifaga qaytish"
+msgstr "Return to the main page"
 
+msgid "VCHD - 8. 1936 yil - Qarshi Vagon Deposi."
+msgstr "VCHD - 8. 1936 - Karshi Wagon Depot."
 
+msgid "Havolalar"
+msgstr "Links"
+
+msgid "Biz bilan bog'lanish"
+msgstr "Contact us"
+
+msgid "Ish vaqti : 16:00 dan 18:00 gacha"
+msgstr "Working hours: 16:00 to 18:00"
+
+msgid "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan."
+msgstr "©Copyright 2024. All rights reserved."
+
+msgid "Ko'p yillik tajriba"
+msgstr "Many years of experience"
+
+msgid "Qarshi vagon deposi"
+msgstr "Karshi wagon depot"
+
+msgid "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !"
+msgstr "Contact us for questions about our services, activities, or partnerships!"
+
+msgid "Hoziroq bog'laning"
+msgstr "Contact now"
+
+msgid "Ko'roq o'qish"
+msgstr "Read more"
+
+msgid "Yangilik tafsiloti"
+msgstr "News details"
+
+msgid "So'ngi yangiliklar"
+msgstr "Latest news"
+
+msgid "Yordam kerakmi ?"
+msgstr "Need help?"
+
+msgid "Bog'lanish"
+msgstr "Contact"
+
+msgid "Takliflar va hamkorlik uchun"
+msgstr "For suggestions and partnerships"
+
+msgid "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning!"
+msgstr "Contact us for questions about our services, activities, or partnerships!"
+
+msgid "Ism-familya"
+msgstr "Full name"
+
+msgid "Telefon raqam"
+msgstr "Phone number"
+
+msgid "Xabar qoldiring"
+msgstr "Leave a message"
+
+msgid "Yuborish"
+msgstr "Send"
+
+msgid "Batafsil"
+msgstr "More details"
+
+msgid "<span>Bizning xizmatlar </span> bilan tanishing"
+msgstr "Explore <span>Our Services</span>"
+
+msgid "Bizning katta yutuqlarga erishishimizga asosiy sabab bu - sifatli xizmatlarimizdir.Xizmatlarimiz bilan tanishing !"
+msgstr "The main reason for our great achievements is our quality services. Explore our services!"
+
+msgid "Hamma xizmatlar"
+msgstr "All services"
+
+msgid "Bizning <span> Galereya</span>"
+msgstr "Our <span>Gallery</span>"
+
+msgid "Bizning galereya orqali, biz haqimizda to'liq ma'lumotga ega bo'ling !"
+msgstr "Get complete information about us through our gallery!"
+
+msgid "Bizning  natijalar <span> raqamlarda</span>"
+msgstr "Our results <span>in numbers</span>"
+
+msgid "Bizning ko'p yillik tajribamiz davomida erishgan natijalarimiz !"
+msgstr "Our achievements over many years of experience!"
+
+msgid "Eng so'ngi <span>yangiliklar</span>"
+msgstr "The latest <span>news</span>"
+
+msgid "Bizning yangiliklar orqali sohada bo'layotgan eng so'ngi o'zgarishlardan xabardor bo'lishingiz mumkin !"
+msgstr "Stay informed about the latest changes in the industry through our news!"
+
+msgid "Rahbariyatimiz <span>a'zolari</span>"
+msgstr "Our management <span>members</span>"
+
+msgid "'O'zbekiston Temir Yo'llari' AJ Vagon xo'jaligi boshqarmasi Qarshi vagon deposi rahbariyatining a'zolari"
+msgstr "Members of the management of the Karshi wagon depot, a branch of 'Uzbekistan Railways' JSC"
+
+msgid "Boshqa xizmatlar"
+msgstr "Other services"

@@ -61,10 +61,11 @@
                 <div class="topbar-contact-info">
                     <ul>
                         <li><a href="#"><i
-                                class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}</a>
+                                class="fa-solid fa-location-dot"></i>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}
+                        </a>
                         </li>
                         <li><a href="#"><i class="fa-solid fa-at"></i> vchdkarshi@mail.ru</a>
-                           </li>
+                        </li>
                     </ul>
                 </div>
                 <!-- Topbar Contact Information End -->
@@ -73,14 +74,14 @@
             <div class="col-lg-3 col-md-4">
                 <!-- Topbar Social Links Start -->
                 <div class="topbar-social-links">
-                     <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                    <ul>
+                        <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                class="fa-brands fa-telegram"></i></a></li>
+                        <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
                 </div>
                 <!-- Topbar Social Links End -->
             </div>
@@ -104,10 +105,14 @@
                     <ul class="navbar-nav mr-auto" id="menu">
                         <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">{% trans "Asosiy" %}</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">{% trans "Xizmatlar" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">{% trans "Xizmatlar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{% trans "Yangiliklar" %}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{% url 'management' %}">{% trans "Rahbariyat" %}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">{% trans "Aloqa" %}</a></li>
 
                         <li class="nav-item">
@@ -152,7 +157,7 @@
                 <!--Get Contact Us Start-->
                 <div class="header-contact-us">
                     <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
+                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 75 227 01 53</span></h3></a>
                 </div>
                 <!--Get Contact Us End-->
 
@@ -165,140 +170,157 @@
 </header>
 <!-- Header End -->
 
-    <!-- Page header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header box Start -->
-                    <div class="page-header-box">
-                        <h2 class="text-anime-style-3">{% trans 'Aloqa' %}</h2>
-                        <nav class="wow fadeInUp" data-wow-delay="0.25s">
-                            <ol class="breadcrumb">
-                                <li><a href="{% url 'index' %}">{% trans "Asosiy" %}</a></li>
-                                <li>{% trans 'Aloqa' %}</li>
-                            </ol>
-                        </nav>
+<!-- Page header Start -->
+<div class="page-header parallaxie">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Page Header box Start -->
+                <div class="page-header-box">
+                    <h2 class="text-anime-style-3">{% trans 'Aloqa' %}</h2>
+                    <nav class="wow fadeInUp" data-wow-delay="0.25s">
+                        <ol class="breadcrumb">
+                            <li><a href="{% url 'index' %}">{% trans "Asosiy" %}</a></li>
+                            <li>{% trans 'Aloqa' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- Page Header Box End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Get In Touch Section Start -->
+<div class="get-in-touch">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <!-- Get Quote Start -->
+                <div class="get-quote">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <br>
+                            <h5  style="color: red"  class="text-anime-style-3">{{ message }}</h5>
+                            <br>
+                        {% endfor %}
+                    {% endif %}
+                    <h2 class="text-anime-style-3">{% trans "Takliflar va hamkorlik uchun" %}</h2>
+                    <div class="get-quote-content">
+                        <p class="wow fadeInUp"
+                           data-wow-delay="0.5s">{% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning!" %}</p>
                     </div>
-                    <!-- Page Header Box End -->
+                    <div class="get-quote-form wow fadeInUp" data-wow-delay="0.75s">
+                        <form action="{% url 'contact' %}" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group col-md-12 mb-3">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                           placeholder="{% trans "Ism-familya" %}" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                <div class="form-group  col-md-12 mb-3">
+                                    <input type="text" class="form-control" id="phone_number" name="phone_number"
+                                           placeholder="{% trans "Telefon raqam" %}" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                <div class="form-group col-md-12 mb-3">
+                                    <textarea name="message" class="form-control" id="msg" rows="3"
+                                              placeholder="{% trans "Xabar qoldiring" %}" required></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn-default">{% trans "Yuborish" %}</button>
+                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Get Quote End -->
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <div class="contact-us">
+                    <h2 class="text-anime-style-3">{% trans "Biz bilan bog'lanish" %}</h2>
+                    <!-- Contact Us Info Start -->
+                    <div class="contact-us-info">
+                        <div class="footer-info-box wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="icon-box">
+                                <img src="{% static "images/icon-mail.svg" %}" alt="">
+                            </div>
+
+                            <p>vchdkarshi@mail.ru</p>
+
+                        </div>
+
+                        <div class="footer-info-box wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="icon-box">
+                                <img src="{% static "images/icon-location.svg" %}" alt="">
+                            </div>
+
+                            <p>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}</p>
+                        </div>
+
+                        <div class="footer-info-box wow fadeInUp" data-wow-delay="0.75s">
+                            <div class="icon-box">
+                                <img src="{% static "images/icon-call.svg" %}" alt="">
+                            </div>
+
+                            <p>+998 75 227 01 53</p>
+                        </div>
+                    </div>
+                    <!-- Contact Us Info End -->
+
+                    <!-- Contact Us Footer Start -->
+                    <div class="contact-us-footer wow fadeInUp" data-wow-delay="1s">
+                        <div class="topbar-social-links contact-details">
+                            <ul>
+                                <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                        class="fa-brands fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                        class="fa-brands fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--Get Contact Us Start-->
+                        <div class="header-contact-us">
+                            <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
+                                <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 75 227 01 53</span></h3>
+                            </a>
+                        </div>
+                        <!--Get Contact Us End-->
+                    </div>
+                    <!-- Contact Us Footer End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
+</div>
+<!-- Get In Touch Section End -->
 
-    <!-- Get In Touch Section Start -->
-    <div class="get-in-touch">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-6">
-                    <!-- Get Quote Start -->
-                    <div class="get-quote">
-                        <h2 class="text-anime-style-3">{% trans "Takliflar va hamkorlik uchun" %}</h2>
-                        <div class="get-quote-content">
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">{% trans "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning!" %}</p>
-                        </div>
-                        <div class="get-quote-form wow fadeInUp" data-wow-delay="0.75s">
-                            <form id="contactForm" action="#" method="post" data-toggle="validator">
-                                <div class="row">
-                                    <div class="form-group col-md-12 mb-3">
-                                        <input type="text" class="form-control" id="name" placeholder="{% trans "Ism-familya" %}" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group  col-md-12 mb-3">
-                                        <input type="email" class="form-control" id="email" placeholder="{% trans "Telefon raqam" %}" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-3">
-                                        <textarea name="msg" class="form-control" id="msg" rows="3" placeholder="{% trans "Xabar qoldiring" %}" required></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn-default">{% trans "Yuborish" %}</button>
-                                        <div id="msgSubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Get Quote End -->
-                </div>
-
-                <div class="col-lg-5 col-md-6">
-                    <div class="contact-us">
-                        <h2 class="text-anime-style-3">{% trans "Biz bilan bog'lanish" %}</h2>
-                        <!-- Contact Us Info Start -->
-                        <div class="contact-us-info">
-                            <div class="footer-info-box wow fadeInUp" data-wow-delay="0.25s">
-                                <div class="icon-box">
-                                    <img src="{% static "images/icon-mail.svg" %}" alt="">
-                                </div>
-
-                                <p>vchdkarshi@mail.ru</p>
-
-                            </div>
-
-                            <div class="footer-info-box wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="icon-box">
-                                    <img src="{% static "images/icon-location.svg" %}" alt="">
-                                </div>
-
-                                <p>{% trans "Qarshi shahri. Xorazm ko'cha 89-uy" %}</p>
-                            </div>
-
-                            <div class="footer-info-box wow fadeInUp" data-wow-delay="0.75s">
-                                <div class="icon-box">
-                                    <img src="{% static "images/icon-call.svg" %}" alt="">
-                                </div>
-
-                                <p>+998 90 517 30 07</p>
-                            </div>
-                        </div>
-                        <!-- Contact Us Info End -->
-
-                        <!-- Contact Us Footer Start -->
-                        <div class="contact-us-footer wow fadeInUp" data-wow-delay="1s">
-                            <div class="topbar-social-links contact-details">
-                                 <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
-                            </div>
-                            <!--Get Contact Us Start-->
-                            <div class="header-contact-us">
-                                <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt=""><h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
-                            </div>
-                            <!--Get Contact Us End-->
-                        </div>
-                        <!-- Contact Us Footer End -->
-                    </div>
+<!-- Google Map Iframe Start -->
+<div class="google-map">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="google-map-iframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2043.1025170921107!2d65.77067480558948!3d38.82649049621252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea92790a51fe9%3A0x8d47664405aa7a6f!2sQarshi%20vagon%20deposi!5e0!3m2!1sen!2s!4v1718171916766!5m2!1sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Get In Touch Section End -->
+</div>
+<!-- Google Map Iframe End -->
 
-    <!-- Google Map Iframe Start -->
-    <div class="google-map">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="google-map-iframe">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2043.1025170921107!2d65.77067480558948!3d38.82649049621252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea92790a51fe9%3A0x8d47664405aa7a6f!2sQarshi%20vagon%20deposi!5e0!3m2!1sen!2s!4v1718171916766!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Google Map Iframe End -->
-
-   <!-- Main Footer Start  -->
+<!-- Main Footer Start  -->
 <footer class="main-footer">
     <!-- Mega Footer Start -->
     <div class="mega-footer">
@@ -324,13 +346,13 @@
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-link">
                             <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                                <li><a href="https://t.me/vchdqarshi" target="_blank"><i
+                                        class="fa-brands fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
+                                        class="fa-brands fa-facebook"></i></a></li>
+                            </ul>
                         </div>
                         <!-- Footer Social Link End -->
                     </div>
@@ -388,7 +410,7 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
 
-                                <p>+998 90 517 30 07</p>
+                                <p>+998 75 227 01 53</p>
                             </div>
                             <div class="footer-info-box">
                                 <div class="icon-box">
@@ -403,37 +425,37 @@
                 </div>
                 <!-- Footer Contact Info End -->
 
-{#                <!-- Subscribe Newsletters Start  -->#}
-{#                <div class="col-lg-3 col-md-6 col-12">#}
-{#                    <!-- footer info heading Start -->#}
-{#                    <div class="footer-info-heading">#}
-{#                        <h2>News Letter</h2>#}
-{#                    </div>#}
-{#                    <!-- footer info heading End -->#}
-{##}
-{#                    <!-- Newsletters Content Start -->#}
-{#                    <div class="newsletters-content">#}
-{#                        <p>Join our newsletter community to receive regular updates on the topics that matter to#}
-{#                            you.</p>#}
-{#                    </div>#}
-{#                    <!-- Newsletters Content End -->#}
-{##}
-{#                    <!-- Newsletters Form Start -->#}
-{#                    <div class="newsletters-form">#}
-{#                        <form id="newslettersForm" action="#" class="mail-box">#}
-{#                            <div class="row no-gutters">#}
-{#                                <div class="form-group col-11">#}
-{#                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
-{#                                </div>#}
-{#                                <div class="col-1">#}
-{#                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </form>#}
-{#                    </div>#}
-{#                    <!-- Newsletters Form End -->#}
-{#                </div>#}
-{#                <!-- Subscribe Newsletters End  -->#}
+                {#                <!-- Subscribe Newsletters Start  -->#}
+                {#                <div class="col-lg-3 col-md-6 col-12">#}
+                {#                    <!-- footer info heading Start -->#}
+                {#                    <div class="footer-info-heading">#}
+                {#                        <h2>News Letter</h2>#}
+                {#                    </div>#}
+                {#                    <!-- footer info heading End -->#}
+                {##}
+                {#                    <!-- Newsletters Content Start -->#}
+                {#                    <div class="newsletters-content">#}
+                {#                        <p>Join our newsletter community to receive regular updates on the topics that matter to#}
+                {#                            you.</p>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Content End -->#}
+                {##}
+                {#                    <!-- Newsletters Form Start -->#}
+                {#                    <div class="newsletters-form">#}
+                {#                        <form id="newslettersForm" action="#" class="mail-box">#}
+                {#                            <div class="row no-gutters">#}
+                {#                                <div class="form-group col-11">#}
+                {#                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
+                {#                                </div>#}
+                {#                                <div class="col-1">#}
+                {#                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </form>#}
+                {#                    </div>#}
+                {#                    <!-- Newsletters Form End -->#}
+                {#                </div>#}
+                {#                <!-- Subscribe Newsletters End  -->#}
             </div>
         </div>
     </div>
@@ -441,63 +463,63 @@
 </footer>
 <!-- Main footer End -->
 
-    <!-- Footer Copyright Section Start -->
-    <div class="footer-copyright-links">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-7 col-12">
-                    <!-- Footer Copyright Content Start -->
-                    <div class="footer-copyright">
-                        <p>{% trans "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan." %}</p>
-                    </div>
-                    <!-- Footer Copyright Content End -->
+<!-- Footer Copyright Section Start -->
+<div class="footer-copyright-links">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7 col-12">
+                <!-- Footer Copyright Content Start -->
+                <div class="footer-copyright">
+                    <p>{% trans "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan." %}</p>
                 </div>
-{#                <div class="col-lg-6 col-md-5 col-12">#}
-{#                    <!-- Footer Policy Links Start -->#}
-{#                    <div class="footer-policy-links">#}
-{#                        <ul>#}
-{#                            <li><a href="#">Privacy Policy</a></li>#}
-{#                            <li><a href="#">Terms of Service</a></li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                    <!-- Footer Policy Links End -->#}
-{#                </div>#}
+                <!-- Footer Copyright Content End -->
             </div>
+            {#                <div class="col-lg-6 col-md-5 col-12">#}
+            {#                    <!-- Footer Policy Links Start -->#}
+            {#                    <div class="footer-policy-links">#}
+            {#                        <ul>#}
+            {#                            <li><a href="#">Privacy Policy</a></li>#}
+            {#                            <li><a href="#">Terms of Service</a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                    <!-- Footer Policy Links End -->#}
+            {#                </div>#}
         </div>
     </div>
-    <!-- Footer Copyright Section End -->
+</div>
+<!-- Footer Copyright Section End -->
 
-    <!-- Jquery Library File -->
-    <script src="{% static "js/jquery-3.7.1.min.js" %}"></script>
-    <!-- Bootstrap js File -->
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <!-- Validator js File -->
-    <script src="{% static "js/validator.min.js" %}"></script>
-    <!-- SlickNav js File -->
-    <script src="{% static "js/jquery.slicknav.js" %}"></script>
-    <!-- Swiper js File -->
-    <script src="{% static "js/swiper-bundle.min.js" %}"></script>
-    <!-- Counter js File -->
-    <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
-    <script src="{% static "js/jquery.counterup.min.js" %}"></script>
-    <!-- Magnific js File -->
-    <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
-    <!-- SmoothScroll -->
-    <script src="{% static "js/SmoothScroll.js" %}"></script>
-    <!-- Parallax js -->
-	<script src="{% static "js/parallaxie.js" %}"></script>
-    <!-- MagicCursor js File -->
-    <script src="{% static "js/gsap.min.js" %}"></script>
-    <script src="{% static "js/magiccursor.js" %}"></script>
-    <!-- Text Effect js File -->
-	<script src="{% static "js/SplitText.js" %}"></script>
-    <script src="{% static "js/ScrollTrigger.min.js" %}"></script>
-    <!-- YTPlayer js File -->
-    <script src="{% static "js/jquery.mb.YTPlayer.min.js" %}"></script>
-    <!-- Wow js File -->
-    <script src="{% static "js/wow.js" %}"></script>
-    <!-- Main Custom js File -->
-    <script src="{% static "js/function.js" %}"></script>
+<!-- Jquery Library File -->
+<script src="{% static "js/jquery-3.7.1.min.js" %}"></script>
+<!-- Bootstrap js File -->
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<!-- Validator js File -->
+<script src="{% static "js/validator.min.js" %}"></script>
+<!-- SlickNav js File -->
+<script src="{% static "js/jquery.slicknav.js" %}"></script>
+<!-- Swiper js File -->
+<script src="{% static "js/swiper-bundle.min.js" %}"></script>
+<!-- Counter js File -->
+<script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+<script src="{% static "js/jquery.counterup.min.js" %}"></script>
+<!-- Magnific js File -->
+<script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<!-- SmoothScroll -->
+<script src="{% static "js/SmoothScroll.js" %}"></script>
+<!-- Parallax js -->
+<script src="{% static "js/parallaxie.js" %}"></script>
+<!-- MagicCursor js File -->
+<script src="{% static "js/gsap.min.js" %}"></script>
+<script src="{% static "js/magiccursor.js" %}"></script>
+<!-- Text Effect js File -->
+<script src="{% static "js/SplitText.js" %}"></script>
+<script src="{% static "js/ScrollTrigger.min.js" %}"></script>
+<!-- YTPlayer js File -->
+<script src="{% static "js/jquery.mb.YTPlayer.min.js" %}"></script>
+<!-- Wow js File -->
+<script src="{% static "js/wow.js" %}"></script>
+<!-- Main Custom js File -->
+<script src="{% static "js/function.js" %}"></script>
 </body>
 
 </html>

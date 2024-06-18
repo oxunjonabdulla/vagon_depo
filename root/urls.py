@@ -16,3 +16,6 @@ urlpatterns = [
     path("set_language/<str:language>", set_language, name="set-language"),
 
 ]
+
+
+handler404 = 'app.views.other.bad_request_view'

@@ -1,9 +1,9 @@
 (function ($) {
     "use strict";
-	
-	var $window = $(window); 
-	var $body = $('body'); 
-	
+
+	var $window = $(window);
+	var $body = $('body');
+
 	/* Preloader Effect */
 	$window.on('load', function(){
 		setHeaderHeight();
@@ -17,8 +17,8 @@
 
 	function setHeaderHeight(){
 		$("header.main-header").css("height", $('header .header-sticky').outerHeight());
-	}	
-	
+	}
+
 	$(window).on("scroll", function() {
 		var fromTop = $(window).scrollTop();
 		setHeaderHeight();
@@ -27,7 +27,7 @@
 		$("header .header-sticky").toggleClass("active", (fromTop > 600));
 	});
 
-	
+
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
@@ -76,7 +76,7 @@
 			translateXValue = 0,
 			delayValue 		= 0.5,
 		   animatedTextElements = document.querySelectorAll('.text-anime-style-1');
-		
+
 		animatedTextElements.forEach((element) => {
 			let animationSplitText = new SplitText(element, { type: "chars, words" });
 				gsap.from(animationSplitText.words, {
@@ -87,16 +87,16 @@
 				stagger: staggerAmount,
 				scrollTrigger: { trigger: element, start: "top 85%" },
 				});
-		});		
+		});
 	}
-	
-	if ($('.text-anime-style-2').length) {				
+
+	if ($('.text-anime-style-2').length) {
 		let	 staggerAmount 		= 0.05,
 			 translateXValue	= 20,
 			 delayValue 		= 0.5,
 			 easeType 			= "power2.out",
 			 animatedTextElements = document.querySelectorAll('.text-anime-style-2');
-		
+
 		animatedTextElements.forEach((element) => {
 			let animationSplitText = new SplitText(element, { type: "chars, words" });
 				gsap.from(animationSplitText.chars, {
@@ -108,12 +108,12 @@
 					ease: easeType,
 					scrollTrigger: { trigger: element, start: "top 85%"},
 				});
-		});		
+		});
 	}
-	
-	if ($('.text-anime-style-3').length) {		
+
+	if ($('.text-anime-style-3').length) {
 		let	animatedTextElements = document.querySelectorAll('.text-anime-style-3');
-		
+
 		 animatedTextElements.forEach((element) => {
 			//Reset if needed
 			if (element.animation) {
@@ -142,7 +142,7 @@
 				ease: Back.easeOut,
 				stagger: 0.02,
 			});
-		});		
+		});
 	}
 
 	/* Contact form validation */
@@ -157,13 +157,13 @@
 	function submitForm(){
 		/* Initiate Variables With Form Content*/
 		var name = $("#name").val();
-		var email = $("#email").val();
-		var message = $("#msg").val();
+		var phone_number = $("#phone_number").val();
+		var message = $("#message").val();
 
 		$.ajax({
 			type: "POST",
 			url: "form-process.php",
-			data: "name=" + name + "&email=" + email + "&message=" + message,
+			data: "name=" + name + "&phone_number=" + phone_number + "&message=" + message,
 			success : function(text){
 				if (text == "success"){
 					formSuccess();
@@ -190,9 +190,9 @@
 	/* Contact form validation end */
 
 
-	/* Animated Wow Js */	
+	/* Animated Wow Js */
 	new WOW().init();
-	
+
 	/* Popup Video */
 	if ($('.popup-video').length) {
 		$('.popup-video').magnificPopup({
@@ -225,7 +225,7 @@
 			  return element.find('img');
 			}
 		}
-	});	
+	});
 
 	/* Parallaxie js */
 	var $parallaxie = $('.parallaxie');
@@ -277,5 +277,5 @@
 			}
 		}
 	});
-	
+
 })(jQuery);

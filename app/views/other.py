@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.utils.translation import gettext_lazy as _
 
+from app.forms import ContactModelForm
 from app.models import Banner, Blog, About, Service, OurResult, Gallery, History, Management
 
 
@@ -34,11 +37,22 @@ def about_view(request):
 
 
 def contact_view(request):
+    if request.method == "POST":
+        form = ContactModelForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+        else:
+            message = _("Ma'lumotlarni kiritishda xatolik sodir bo'ldi.Iltimos qayta kiriting")
+            messages.add_message(request, messages.ERROR, message)
+            return redirect('contact')
+    form = ContactModelForm()
     return render(request=request,
-                  template_name="app/contact.html")
+                  template_name="app/contact.html",
+                  context={"form": form})
 
 
-def bad_request_view(request):
+def bad_request_view(request, exception):
     return render(request=request,
                   template_name="app/404.html")
 

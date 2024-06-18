@@ -1,14 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-12 11:32+0500\n"
+"POT-Creation-Date: 2024-06-17 10:06+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +14,147 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: templates/app/index.html:62
-msgid "Qarshi shahri. Ko'prik yon oldi"
-msgstr ""
+
+msgid "Ma'lumotlarni kiritishda xatolik sodir bo'ldi.Iltimos qayta kiriting"
+msgstr "Произошла ошибка при вводе данных. Пожалуйста, попробуйте еще раз."
+
+msgid "Uzbek"
+msgstr "Узбекский"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Qarshi shahri. Xorazm ko'cha 89-uy"
+msgstr "Город Карши. Улица Хорезм, дом 89"
+
+msgid "Asosiy"
+msgstr "Главная"
+
+msgid "Biz Haqimizda"
+msgstr "О нас"
+
+msgid "Xizmatlar"
+msgstr "Услуги"
+
+msgid "Yangiliklar"
+msgstr "Новости"
+
+msgid "Rahbariyat"
+msgstr "Руководство"
+
+msgid "Aloqa"
+msgstr "Контакты"
+
+msgid "Istalgan vaqtda qo'ng'iroq qiling"
+msgstr "Звоните в любое время"
+
+msgid "Sahifa topilmadi"
+msgstr "Страница не найдена"
+
+msgid "Kechirasiz biz bu sahifani<span> topa olmadik!</span>"
+msgstr "Извините, мы <span>не смогли найти эту страницу!</span>"
+
+msgid "Asosiy sahifaga qaytish"
+msgstr "Вернуться на главную страницу"
+
+msgid "VCHD - 8. 1936 yil - Qarshi Vagon Deposi."
+msgstr "ВЧД - 8. 1936 - Каршинское вагонное депо."
+
+msgid "Havolalar"
+msgstr "Ссылки"
+
+msgid "Biz bilan bog'lanish"
+msgstr "Связаться с нами"
+
+msgid "Ish vaqti : 16:00 dan 18:00 gacha"
+msgstr "Рабочее время: с 16:00 до 18:00"
+
+msgid "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan."
+msgstr "©Авторское право 2024. Все права защищены."
+
+msgid "Ko'p yillik tajriba"
+msgstr "Многолетний опыт"
+
+msgid "Qarshi vagon deposi"
+msgstr "Каршинское вагонное депо"
+
+msgid "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning !"
+msgstr "Свяжитесь с нами по вопросам наших услуг, деятельности или сотрудничества!"
+
+msgid "Hoziroq bog'laning"
+msgstr "Связаться сейчас"
+
+msgid "Ko'roq o'qish"
+msgstr "Читать далее"
+
+msgid "Yangilik tafsiloti"
+msgstr "Детали новости"
+
+msgid "So'ngi yangiliklar"
+msgstr "Последние новости"
+
+msgid "Yordam kerakmi ?"
+msgstr "Нужна помощь?"
+
+msgid "Bog'lanish"
+msgstr "Связаться"
+
+msgid "Takliflar va hamkorlik uchun"
+msgstr "Для предложений и сотрудничества"
+
+msgid "Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha biz bilan bog'laning!"
+msgstr "Свяжитесь с нами по вопросам наших услуг, деятельности или сотрудничества!"
+
+msgid "Ism-familya"
+msgstr "ФИО"
+
+msgid "Telefon raqam"
+msgstr "Номер телефона"
+
+msgid "Xabar qoldiring"
+msgstr "Оставьте сообщение"
+
+msgid "Yuborish"
+msgstr "Отправить"
+
+msgid "Batafsil"
+msgstr "Подробнее"
+
+msgid "<span>Bizning xizmatlar </span> bilan tanishing"
+msgstr "Ознакомьтесь с <span>нашими услугами</span>"
+
+msgid "Bizning katta yutuqlarga erishishimizga asosiy sabab bu - sifatli xizmatlarimizdir.Xizmatlarimiz bilan tanishing !"
+msgstr "Основная причина наших больших достижений – это качественные услуги. Ознакомьтесь с нашими услугами!"
+
+msgid "Hamma xizmatlar"
+msgstr "Все услуги"
+
+msgid "Bizning <span> Galereya</span>"
+msgstr "Наша <span>галерея</span>"
+
+msgid "Bizning galereya orqali, biz haqimizda to'liq ma'lumotga ega bo'ling !"
+msgstr "Получите полную информацию о нас через нашу галерею!"
+
+msgid "Bizning  natijalar <span> raqamlarda</span>"
+msgstr "Наши результаты <span>в цифрах</span>"
+
+msgid "Bizning ko'p yillik tajribamiz davomida erishgan natijalarimiz !"
+msgstr "Наши достижения за многолетний опыт!"
+
+msgid "Eng so'ngi <span>yangiliklar</span>"
+msgstr "Последние <span>новости</span>"
+
+msgid "Bizning yangiliklar orqali sohada bo'layotgan eng so'ngi o'zgarishlardan xabardor bo'lishingiz mumkin !"
+msgstr "Оставайтесь в курсе последних изменений в отрасли с нашими новостями!"
+
+msgid "Rahbariyatimiz <span>a'zolari</span>"
+msgstr "Члены <span>нашего руководства</span>"
+
+msgid "'O'zbekiston Temir Yo'llari' AJ Vagon xo'jaligi boshqarmasi Qarshi vagon deposi rahbariyatining a'zolari"
+msgstr "Члены руководства Каршинского вагонного депо, филиала 'Узбекистон Темир Йуллари' АО"
+
+msgid "Boshqa xizmatlar"
+msgstr "Другие услуги"

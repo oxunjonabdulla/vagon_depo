@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from decouple import config
 from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -8,13 +9,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3bkeglq8^7&f_z4hoas=!2%2@4vk2_foti#0qv7)%qca^tum2='
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -66,12 +64,30 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "vchd",
+#         "USER": "postgres",
+#         "PASSWORD": "22",
+#         "HOST": "127.0.0.1",
+#         "PORT": "5432",
+#     }
+# }
+
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -134,15 +150,16 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
 
 JAZZMIN_SETTINGS = {
-    "site_title": "Evagon.uz",
-    "site_header": "Evagon.uz",
-    "site_brand": "Evagon.uz",
+    "site_title": "vchdqarshi.uz",
+    "site_header": "vchdqarshi.uz",
+    "site_brand": "vchdqarshi.uz",
     "site_logo": "images/logo.png",
-    "welcome_sign": "Evagon.uz",
-    "copyright": "Evagon.uz",
+    "welcome_sign": "vchdqarshi.uz",
+    "copyright": "vchdqarshi.uz",
     "user_avatar": "images/logo.png",
     "login_logo": "images/logo1.png",
     "login_logo_dark": "images/logo1.png",
     "site_icon": "images/logo.png",
 }
 
+LOGOUT_REDIRECT_URL = '/admin/login/'

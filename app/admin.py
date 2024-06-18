@@ -1,7 +1,8 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 
-from app.models import Banner, Blog, About, Service, OurResult, Gallery, History, Management
+from app.models import Banner, Blog, About, Service, OurResult, Gallery, History, Management, Contact, BlogSocialLink, \
+    SocialLink
 
 
 # Register your models here.
@@ -76,4 +77,17 @@ class ManagementAdmin(CustomTranslationAdmin):
     search_fields = ['fullname', "position"]
 
 
-admin.site.register(Gallery)
+@admin.register(SocialLink)
+class SocialLinkAdmin(admin.ModelAdmin):
+    list_display_links = ['title', ]
+    list_display = ['title', "icon"]
+    list_filter = ['title', ]
+    search_fields = ['title', ]
+
+
+admin.site.register([
+    Gallery,
+    Contact,
+    # SocialLink,
+    BlogSocialLink
+])

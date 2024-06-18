@@ -156,7 +156,7 @@
                 <!--Get Contact Us Start-->
                 <div class="header-contact-us">
                     <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 90 517 30 07</span></h3></a>
+                        <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %}<span>+998 75 227 01 53</span></h3></a>
                 </div>
                 <!--Get Contact Us End-->
 
@@ -201,7 +201,9 @@
                     <!-- Blog Detail Featured Image Start -->
                     <div class="blog-detail-featured-image">
                         <figure class="reveal image-anime">
-                            <img src="{{ blog.image.url }}" alt="">
+                            {% if blog.image %}
+                                <img src="{{ blog.image.url }}" alt="">
+                            {% endif %}
                         </figure>
                     </div>
                     <!-- Blog Detail Featured Image End -->
@@ -232,12 +234,9 @@
                             <!-- Post Sharing Links Start -->
                             <div class="post-social-links wow fadeInUp" data-wow-delay="0.25s">
                                 <ul>
-                                    <li><a href="https://t.me/vchdqarshi" target="_blank"><i
-                                            class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="https://www.instagram.com/qarshi_vchd8" target="_blank"><i
-                                            class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/groups/2272788602933289" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i></a></li>
+                                    {% for link in social_links %}
+                                    	 <li><a href="{{ link.link }}" target="_blank"><i><img width="20px;" src="{{ link.social_link.icon.url }}" alt=""></i></a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                             <!-- Post Sharing Links End -->
@@ -276,7 +275,10 @@
                                 <div class="recent-post-item">
                                     <div class="recent-post-feature-img">
                                         <figure>
-                                            <a href="#"><img src="{{ blog.image.url }}" alt="img"></a>
+                                            {% if blog.image %}
+                                                <a href="#"><img src="{{ blog.image.url }}" alt="img"></a>
+
+                                            {% endif %}
                                         </figure>
                                     </div>
 
@@ -307,7 +309,7 @@
                             <!--Get Contact Us Start-->
                             <div class="header-contact-us" style="margin-left: 12px">
                                 <a href="#"><img src="{% static "images/icon-phone.svg" %}" alt="">
-                                    <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %} <span>+998 90 517 30 07</span>
+                                    <h3>{% trans "Istalgan vaqtda qo'ng'iroq qiling" %} <span>+998 75 227 01 53</span>
                                     </h3></a>
                             </div>
                             <!--Get Contact Us End-->
@@ -411,7 +413,7 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
 
-                                <p>+998 90 517 30 07</p>
+                                <p>+998 75 227 01 53</p>
                             </div>
                             <div class="footer-info-box">
                                 <div class="icon-box">

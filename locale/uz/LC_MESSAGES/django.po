@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-12 11:32+0500\n"
+"POT-Creation-Date: 2024-06-17 10:05+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,325 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: templates/app/index.html:62
-msgid "Qarshi shahri. Ko'prik yon oldi"
+#: .\app\views\other.py:46
+msgid "Ma'lumotlarni kiritishda xatolik sodir bo'ldi.Iltimos qayta kiriting"
+msgstr ""
+
+#: .\root\settings.py:125
+msgid "Uzbek"
+msgstr ""
+
+#: .\root\settings.py:126
+msgid "Russian"
+msgstr ""
+
+#: .\root\settings.py:127
+msgid "English"
+msgstr ""
+
+#: .\templates\app\404.html:64 .\templates\app\404.html:290
+#: .\templates\app\about.html:64 .\templates\app\about.html:401
+#: .\templates\app\blog\blog.html:64 .\templates\app\blog\blog.html:362
+#: .\templates\app\blog\blog_details.html:64
+#: .\templates\app\blog\blog_details.html:406 .\templates\app\contact.html:64
+#: .\templates\app\contact.html:266 .\templates\app\contact.html:405
+#: .\templates\app\index.html:64 .\templates\app\index.html:648
+#: .\templates\app\management.html:64 .\templates\app\management.html:344
+#: .\templates\app\service\service.html:64
+#: .\templates\app\service\service.html:318
+#: .\templates\app\service\service_details.html:64
+#: .\templates\app\service\service_details.html:362
+msgid "Qarshi shahri. Xorazm ko'cha 89-uy"
+msgstr ""
+
+#: .\templates\app\404.html:104 .\templates\app\404.html:176
+#: .\templates\app\404.html:255 .\templates\app\about.html:105
+#: .\templates\app\about.html:184 .\templates\app\about.html:366
+#: .\templates\app\blog\blog.html:105 .\templates\app\blog\blog.html:182
+#: .\templates\app\blog\blog.html:327
+#: .\templates\app\blog\blog_details.html:105
+#: .\templates\app\blog\blog_details.html:371 .\templates\app\contact.html:106
+#: .\templates\app\contact.html:183 .\templates\app\contact.html:369
+#: .\templates\app\index.html:105 .\templates\app\index.html:613
+#: .\templates\app\management.html:105 .\templates\app\management.html:182
+#: .\templates\app\management.html:309 .\templates\app\service\service.html:105
+#: .\templates\app\service\service.html:182
+#: .\templates\app\service\service.html:283
+#: .\templates\app\service\service_details.html:105
+#: .\templates\app\service\service_details.html:182
+#: .\templates\app\service\service_details.html:327
+msgid "Asosiy"
+msgstr ""
+
+#: .\templates\app\404.html:106 .\templates\app\404.html:256
+#: .\templates\app\about.html:108 .\templates\app\about.html:181
+#: .\templates\app\about.html:185 .\templates\app\about.html:367
+#: .\templates\app\blog\blog.html:108 .\templates\app\blog\blog.html:328
+#: .\templates\app\blog\blog_details.html:108
+#: .\templates\app\blog\blog_details.html:372 .\templates\app\contact.html:109
+#: .\templates\app\contact.html:370 .\templates\app\index.html:108
+#: .\templates\app\index.html:614 .\templates\app\management.html:108
+#: .\templates\app\management.html:310 .\templates\app\service\service.html:108
+#: .\templates\app\service\service.html:284
+#: .\templates\app\service\service_details.html:108
+#: .\templates\app\service\service_details.html:328
+msgid "Biz Haqimizda"
+msgstr ""
+
+#: .\templates\app\404.html:107 .\templates\app\404.html:257
+#: .\templates\app\about.html:109 .\templates\app\about.html:368
+#: .\templates\app\blog\blog.html:109 .\templates\app\blog\blog.html:329
+#: .\templates\app\blog\blog_details.html:109
+#: .\templates\app\blog\blog_details.html:373 .\templates\app\contact.html:110
+#: .\templates\app\contact.html:371 .\templates\app\index.html:109
+#: .\templates\app\index.html:615 .\templates\app\management.html:109
+#: .\templates\app\management.html:311 .\templates\app\service\service.html:109
+#: .\templates\app\service\service.html:179
+#: .\templates\app\service\service.html:183
+#: .\templates\app\service\service.html:285
+#: .\templates\app\service\service_details.html:109
+#: .\templates\app\service\service_details.html:329
+msgid "Xizmatlar"
+msgstr ""
+
+#: .\templates\app\404.html:108 .\templates\app\404.html:258
+#: .\templates\app\about.html:111 .\templates\app\about.html:369
+#: .\templates\app\blog\blog.html:111 .\templates\app\blog\blog.html:179
+#: .\templates\app\blog\blog.html:183 .\templates\app\blog\blog.html:330
+#: .\templates\app\blog\blog_details.html:111
+#: .\templates\app\blog\blog_details.html:374 .\templates\app\contact.html:112
+#: .\templates\app\contact.html:372 .\templates\app\index.html:111
+#: .\templates\app\index.html:616 .\templates\app\management.html:111
+#: .\templates\app\management.html:312 .\templates\app\service\service.html:111
+#: .\templates\app\service\service.html:286
+#: .\templates\app\service\service_details.html:111
+#: .\templates\app\service\service_details.html:330
+msgid "Yangiliklar"
+msgstr ""
+
+#: .\templates\app\404.html:109 .\templates\app\404.html:259
+#: .\templates\app\about.html:114 .\templates\app\about.html:370
+#: .\templates\app\blog\blog.html:114 .\templates\app\blog\blog.html:331
+#: .\templates\app\blog\blog_details.html:114
+#: .\templates\app\blog\blog_details.html:375 .\templates\app\contact.html:115
+#: .\templates\app\contact.html:373 .\templates\app\index.html:114
+#: .\templates\app\index.html:617 .\templates\app\management.html:114
+#: .\templates\app\management.html:179 .\templates\app\management.html:183
+#: .\templates\app\management.html:313 .\templates\app\service\service.html:114
+#: .\templates\app\service\service.html:287
+#: .\templates\app\service\service_details.html:114
+#: .\templates\app\service\service_details.html:331
+msgid "Rahbariyat"
+msgstr ""
+
+#: .\templates\app\404.html:110 .\templates\app\404.html:260
+#: .\templates\app\about.html:116 .\templates\app\about.html:371
+#: .\templates\app\blog\blog.html:115 .\templates\app\blog\blog.html:332
+#: .\templates\app\blog\blog_details.html:115
+#: .\templates\app\blog\blog_details.html:376 .\templates\app\contact.html:116
+#: .\templates\app\contact.html:180 .\templates\app\contact.html:184
+#: .\templates\app\contact.html:374 .\templates\app\index.html:115
+#: .\templates\app\index.html:618 .\templates\app\management.html:115
+#: .\templates\app\management.html:314 .\templates\app\service\service.html:115
+#: .\templates\app\service\service.html:288
+#: .\templates\app\service\service_details.html:115
+#: .\templates\app\service\service_details.html:332
+msgid "Aloqa"
+msgstr ""
+
+#: .\templates\app\404.html:154 .\templates\app\about.html:160
+#: .\templates\app\about.html:222 .\templates\app\blog\blog.html:159
+#: .\templates\app\blog\blog_details.html:159
+#: .\templates\app\blog\blog_details.html:310 .\templates\app\contact.html:160
+#: .\templates\app\contact.html:294 .\templates\app\index.html:159
+#: .\templates\app\index.html:276 .\templates\app\management.html:159
+#: .\templates\app\service\service.html:159
+#: .\templates\app\service\service_details.html:159
+#: .\templates\app\service\service_details.html:266
+msgid "Istalgan vaqtda qo'ng'iroq qiling"
+msgstr ""
+
+#: .\templates\app\404.html:173
+msgid "Sahifa topilmadi"
+msgstr ""
+
+#: .\templates\app\404.html:199
+msgid "Kechirasiz biz bu sahifani<span> topa olmadik!</span>"
+msgstr ""
+
+#: .\templates\app\404.html:200
+msgid "Asosiy sahifaga qaytish"
+msgstr ""
+
+#: .\templates\app\404.html:228 .\templates\app\about.html:339
+#: .\templates\app\blog\blog.html:298
+#: .\templates\app\blog\blog_details.html:344 .\templates\app\contact.html:342
+#: .\templates\app\index.html:586 .\templates\app\management.html:282
+#: .\templates\app\service\service.html:256
+#: .\templates\app\service\service_details.html:300
+msgid "VCHD - 8. 1936 yil - Qarshi Vagon Deposi."
+msgstr ""
+
+#: .\templates\app\404.html:252 .\templates\app\about.html:363
+#: .\templates\app\blog\blog.html:324
+#: .\templates\app\blog\blog_details.html:368 .\templates\app\contact.html:366
+#: .\templates\app\index.html:610 .\templates\app\management.html:306
+#: .\templates\app\service\service.html:280
+#: .\templates\app\service\service_details.html:324
+msgid "Havolalar"
+msgstr ""
+
+#: .\templates\app\404.html:271 .\templates\app\about.html:382
+#: .\templates\app\blog\blog.html:343
+#: .\templates\app\blog\blog_details.html:387 .\templates\app\contact.html:249
+#: .\templates\app\contact.html:385 .\templates\app\index.html:629
+#: .\templates\app\management.html:325 .\templates\app\service\service.html:299
+#: .\templates\app\service\service_details.html:343
+msgid "Biz bilan bog'lanish"
+msgstr ""
+
+#: .\templates\app\404.html:305 .\templates\app\about.html:416
+#: .\templates\app\blog\blog.html:377
+#: .\templates\app\blog\blog_details.html:421 .\templates\app\contact.html:420
+#: .\templates\app\index.html:663 .\templates\app\management.html:359
+#: .\templates\app\service\service.html:333
+#: .\templates\app\service\service_details.html:377
+msgid "Ish vaqti : 16:00 dan 18:00 gacha"
+msgstr ""
+
+#: .\templates\app\404.html:359 .\templates\app\about.html:438
+#: .\templates\app\blog\blog.html:399
+#: .\templates\app\blog\blog_details.html:474 .\templates\app\contact.html:473
+#: .\templates\app\index.html:716 .\templates\app\management.html:412
+#: .\templates\app\service\service.html:387
+#: .\templates\app\service\service_details.html:399
+msgid "©Mualliflik huquqi 2024. Barcha huquqlar himoyalangan."
+msgstr ""
+
+#: .\templates\app\about.html:249 .\templates\app\index.html:303
+msgid "Ko'p yillik tajriba"
+msgstr ""
+
+#: .\templates\app\about.html:304 .\templates\app\index.html:380
+msgid "Qarshi vagon deposi"
+msgstr ""
+
+#: .\templates\app\about.html:308 .\templates\app\blog\blog_details.html:303
+#: .\templates\app\index.html:384
+#: .\templates\app\service\service_details.html:259
+msgid ""
+"Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha "
+"biz bilan bog'laning !"
+msgstr ""
+
+#: .\templates\app\about.html:310 .\templates\app\index.html:387
+msgid "Hoziroq bog'laning"
+msgstr ""
+
+#: .\templates\app\blog\blog.html:219
+#: .\templates\app\blog\blog_details.html:286 .\templates\app\index.html:238
+#: .\templates\app\index.html:554
+msgid "Ko'roq o'qish"
+msgstr ""
+
+#: .\templates\app\blog\blog_details.html:179
+msgid "Yangilik tafsiloti"
+msgstr ""
+
+#: .\templates\app\blog\blog_details.html:271
+msgid "So'ngi yangiliklar"
+msgstr ""
+
+#: .\templates\app\blog\blog_details.html:302
+#: .\templates\app\service\service_details.html:258
+msgid "Yordam kerakmi ? "
+msgstr ""
+
+#: .\templates\app\blog\blog_details.html:306
+#: .\templates\app\service\service_details.html:262
+msgid "Bog'lanish"
+msgstr ""
+
+#: .\templates\app\contact.html:209
+msgid "Takliflar va hamkorlik uchun"
+msgstr ""
+
+#: .\templates\app\contact.html:212
+msgid ""
+"Xizmatlarimiz, faoliyatimiz yoki hamkorlik bilan bog'liq savollar bo'yicha "
+"biz bilan bog'laning!"
+msgstr ""
+
+#: .\templates\app\contact.html:220
+msgid "Ism-familya"
+msgstr ""
+
+#: .\templates\app\contact.html:226
+msgid "Telefon raqam"
+msgstr ""
+
+#: .\templates\app\contact.html:232
+msgid "Xabar qoldiring"
+msgstr ""
+
+#: .\templates\app\contact.html:237
+msgid "Yuborish"
+msgstr ""
+
+#: .\templates\app\index.html:202 .\templates\app\index.html:272
+msgid "Batafsil"
+msgstr ""
+
+#: .\templates\app\index.html:320
+msgid "<span>Bizning xizmatlar </span> bilan tanishing"
+msgstr ""
+
+#: .\templates\app\index.html:322
+msgid ""
+"Bizning katta yutuqlarga erishishimizga asosiy sabab bu - sifatli "
+"xizmatlarimizdir.Xizmatlarimiz bilan tanishing !"
+msgstr ""
+
+#: .\templates\app\index.html:364
+msgid "Hamma xizmatlar"
+msgstr ""
+
+#: .\templates\app\index.html:403
+msgid "Bizning <span> Galereya</span>"
+msgstr ""
+
+#: .\templates\app\index.html:405
+msgid "Bizning galereya orqali, biz haqimizda to'liq ma'lumotga ega bo'ling !"
+msgstr ""
+
+#: .\templates\app\index.html:454
+msgid "Bizning  natijalar <span> raqamlarda</span>"
+msgstr ""
+
+#: .\templates\app\index.html:456
+msgid "Bizning ko'p yillik tajribamiz davomida erishgan natijalarimiz !"
+msgstr ""
+
+#: .\templates\app\index.html:525
+msgid "Eng so'ngi <span>yangiliklar</span>"
+msgstr ""
+
+#: .\templates\app\index.html:527
+msgid ""
+"Bizning yangiliklar orqali sohada bo'layotgan eng so'ngi o'zgarishlardan "
+"xabardor bo'lishingiz mumkin !"
+msgstr ""
+
+#: .\templates\app\management.html:201
+msgid "Rahbariyatimiz <span>a'zolari</span>"
+msgstr ""
+
+#: .\templates\app\management.html:203
+msgid ""
+"'O'zbekiston Temir Yo'llari' AJ Vagon xo'jaligi boshqarmasi Qarshi vagon "
+"deposi rahbariyatining a'zolari"
+msgstr ""
+
+#: .\templates\app\service\service_details.html:241
+msgid "Boshqa xizmatlar"
 msgstr ""
